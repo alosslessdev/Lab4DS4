@@ -1,4 +1,4 @@
-﻿namespace Laboratorio_4
+﻿namespace Lab4v2
 {
     partial class Form1
     {
@@ -52,8 +52,8 @@
             // 
             // Encabezado
             // 
-            this.Encabezado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.Encabezado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Encabezado.Image = ((System.Drawing.Image)(resources.GetObject("Encabezado.Image")));
             this.Encabezado.Location = new System.Drawing.Point(0, -2);
@@ -79,8 +79,8 @@
             // 
             // Cuartos
             // 
-            this.Cuartos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.Cuartos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Cuartos.Location = new System.Drawing.Point(223, 205);
             this.Cuartos.Name = "Cuartos";
