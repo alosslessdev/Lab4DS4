@@ -1,14 +1,14 @@
-﻿namespace Lab4DS4
+﻿namespace Laboratorio_4
 {
     partial class Form1
     {
         /// <summary>
-        ///  Required designer variable.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        ///  Clean up any resources being used.
+        /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -23,77 +23,98 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewComboBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new Class1();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.label1 = new System.Windows.Forms.Label();
+            this.Encabezado = new System.Windows.Forms.PictureBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Cuartos = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.Encabezado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Cuartos)).BeginInit();
+            this.SuspendLayout();
             // 
-            // dataGridView1
+            // label1
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4 });
-            dataGridView1.Location = new Point(31, 22);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(636, 381);
-            dataGridView1.TabIndex = 0;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(201, 38);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Hotel Otaku";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // Column1
+            // Encabezado
             // 
-            Column1.HeaderText = "Column1";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
-            Column1.Width = 125;
+            this.Encabezado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Encabezado.Image = ((System.Drawing.Image)(resources.GetObject("Encabezado.Image")));
+            this.Encabezado.Location = new System.Drawing.Point(0, -2);
+            this.Encabezado.Name = "Encabezado";
+            this.Encabezado.Size = new System.Drawing.Size(778, 152);
+            this.Encabezado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Encabezado.TabIndex = 1;
+            this.Encabezado.TabStop = false;
+            this.Encabezado.Click += new System.EventHandler(this.Encabezado_Click);
             // 
-            // Column2
+            // comboBox1
             // 
-            Column2.HeaderText = "Column2";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-            Column2.Resizable = DataGridViewTriState.True;
-            Column2.SortMode = DataGridViewColumnSortMode.Automatic;
-            Column2.Width = 125;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Individual",
+            "Doble",
+            "Suite"});
+            this.comboBox1.Location = new System.Drawing.Point(0, 173);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 2;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
-            // Column3
+            // Cuartos
             // 
-            Column3.HeaderText = "Column3";
-            Column3.MinimumWidth = 6;
-            Column3.Name = "Column3";
-            Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Column4";
-            Column4.MinimumWidth = 6;
-            Column4.Name = "Column4";
-            Column4.Width = 125;
+            this.Cuartos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Cuartos.Location = new System.Drawing.Point(223, 205);
+            this.Cuartos.Name = "Cuartos";
+            this.Cuartos.Size = new System.Drawing.Size(504, 385);
+            this.Cuartos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Cuartos.TabIndex = 3;
+            this.Cuartos.TabStop = false;
+            this.Cuartos.Click += new System.EventHandler(this.Cuartos_Click);
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(dataGridView1);
-            Name = "Form1";
-            Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(778, 602);
+            this.Controls.Add(this.Cuartos);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Encabezado);
+            this.Name = "Form1";
+            this.Text = "lbHotel";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.Encabezado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Cuartos)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewComboBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private Class1 Column4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox Encabezado;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.PictureBox Cuartos;
     }
 }
+
