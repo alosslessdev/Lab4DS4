@@ -31,9 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Encabezado = new System.Windows.Forms.PictureBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.Cuartos = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Encabezado)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Cuartos)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -70,31 +68,17 @@
             "Individual",
             "Doble",
             "Suite"});
-            this.comboBox1.Location = new System.Drawing.Point(0, 173);
+            this.comboBox1.Location = new System.Drawing.Point(35, 166);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 2;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
-            // 
-            // Cuartos
-            // 
-            this.Cuartos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Cuartos.Location = new System.Drawing.Point(223, 205);
-            this.Cuartos.Name = "Cuartos";
-            this.Cuartos.Size = new System.Drawing.Size(504, 385);
-            this.Cuartos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Cuartos.TabIndex = 3;
-            this.Cuartos.TabStop = false;
-            this.Cuartos.Click += new System.EventHandler(this.Cuartos_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(778, 602);
-            this.Controls.Add(this.Cuartos);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Encabezado);
@@ -102,7 +86,6 @@
             this.Text = "lbHotel";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Encabezado)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Cuartos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,7 +96,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox Encabezado;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.PictureBox Cuartos;
     }
 }
 
