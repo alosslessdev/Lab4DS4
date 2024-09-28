@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.Encabezado = new System.Windows.Forms.PictureBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -55,14 +54,12 @@
             this.Encabezado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Encabezado.Image = ((System.Drawing.Image)(resources.GetObject("Encabezado.Image")));
             this.Encabezado.Location = new System.Drawing.Point(0, -2);
             this.Encabezado.Name = "Encabezado";
             this.Encabezado.Size = new System.Drawing.Size(778, 152);
             this.Encabezado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Encabezado.TabIndex = 1;
             this.Encabezado.TabStop = false;
-            this.Encabezado.Click += new System.EventHandler(this.Encabezado_Click);
             // 
             // comboBox1
             // 
@@ -71,11 +68,10 @@
             "Individual",
             "Doble",
             "Suite"});
-            this.comboBox1.Location = new System.Drawing.Point(0, 173);
+            this.comboBox1.Location = new System.Drawing.Point(12, 175);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 2;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // Cuartos
             // 

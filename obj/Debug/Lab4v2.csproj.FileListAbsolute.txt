@@ -1,0 +1,4 @@
+C:\Users\Ivan\OneDrive - Universidad Tecnológica de Panamá\2 Year #2 Semester\Desarrollo de Software 4\trabajos\Laboratorio#4\Laboratorio#4\obj\Debug\Lab4v2.csproj.AssemblyReference.cache
+C:\Users\Ivan\OneDrive - Universidad Tecnológica de Panamá\2 Year #2 Semester\Desarrollo de Software 4\trabajos\Laboratorio#4\Laboratorio#4\obj\Debug\Lab4v2.Properties.Resources.resources
+C:\Users\Ivan\OneDrive - Universidad Tecnológica de Panamá\2 Year #2 Semester\Desarrollo de Software 4\trabajos\Laboratorio#4\Laboratorio#4\obj\Debug\Lab4v2.csproj.GenerateResource.cache
+C:\Users\Ivan\OneDrive - Universidad Tecnológica de Panamá\2 Year #2 Semester\Desarrollo de Software 4\trabajos\Laboratorio#4\Laboratorio#4\obj\Debug\Lab4v2.csproj.CoreCompileInputs.cache
