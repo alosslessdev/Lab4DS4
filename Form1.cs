@@ -62,5 +62,10 @@ namespace Laboratorio_4
         {
 
         }
+
+        private void Encabezado_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
