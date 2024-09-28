@@ -31,7 +31,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Encabezado = new System.Windows.Forms.PictureBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-
             ((System.ComponentModel.ISupportInitialize)(this.Encabezado)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +52,7 @@
             this.Encabezado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Encabezado.Image = global::Lab4v2.Properties.Resources.Encabezado1;
+            this.Encabezado.Image = global::Lab4v2.Properties.Resources.Encabezado;
             this.Encabezado.Location = new System.Drawing.Point(0, -2);
             this.Encabezado.Name = "Encabezado";
             this.Encabezado.Size = new System.Drawing.Size(778, 152);
@@ -74,7 +73,6 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 2;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
-            
             // 
             // Form1
             // 
