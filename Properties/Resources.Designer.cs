@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Laboratorio_4.Properties {
+namespace Lab4v2.Properties {
     using System;
     
     
