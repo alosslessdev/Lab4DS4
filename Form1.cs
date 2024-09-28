@@ -16,10 +16,31 @@ namespace Lab4v2
         {
             InitializeComponent();
 
-
-
             // Enlazar el evento SelectedIndexChanged al ComboBox
             comboBox1.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
+
+            // Create the DataGridView and add a CalendarColumn
+            DataGridView dataGridView = new DataGridView();
+            dataGridView.Dock = DockStyle.Fill;
+            this.Controls.Add(dataGridView);
+
+            // Add a normal TextBox column
+            dataGridView.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                HeaderText = "Text Column"
+            });
+
+            // Add the CalendarColumn
+            CalendarColumn calendarCol = new CalendarColumn
+            {
+                HeaderText = "Date Column"
+            };
+            dataGridView.Columns.Add(calendarCol);
+
+            // Add some sample data
+            dataGridView.Rows.Add("Sample text", DateTime.Now);
+
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -53,4 +74,8 @@ namespace Lab4v2
 
         }
     }
+
+
+  
+
 }
