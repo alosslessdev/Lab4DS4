@@ -40,18 +40,7 @@ namespace Lab4v2
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Cambiar imagen según la selección del ComboBox
-            switch (comboBox1.SelectedIndex)
-            {
-                case 0: // Individual
-                    Cuartos.Image = Image.FromFile("C:\\Users\\Ivan\\OneDrive - Universidad Tecnológica de Panamá\\2 Year #2 Semester\\Desarrollo de Software 4\\trabajos\\Laboratorio#4\\Laboratorio#4\\Individual.jpg");
-                    break;
-                case 1: // Doble
-                    Cuartos.Image = Image.FromFile("C:\\Users\\Ivan\\OneDrive - Universidad Tecnológica de Panamá\\2 Year #2 Semester\\Desarrollo de Software 4\\trabajos\\Laboratorio#4\\Laboratorio#4\\Doble.jpg");
-                    break;
-                case 2: // Suite
-                    Cuartos.Image = Image.FromFile("C:\\Users\\Ivan\\OneDrive - Universidad Tecnológica de Panamá\\2 Year #2 Semester\\Desarrollo de Software 4\\trabajos\\Laboratorio#4\\Laboratorio#4\\Suite.jpg");
-                    break;
-            }
+
         }
 
         private void Cuartos_Click(object sender, EventArgs e)
