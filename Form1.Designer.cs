@@ -36,6 +36,9 @@
             this.Column2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Column3 = new Lab4v2.CalendarColumn();
             this.Column4 = new Lab4v2.CalendarColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calendarColumn1 = new Lab4v2.CalendarColumn();
+            this.calendarColumn2 = new Lab4v2.CalendarColumn();
             ((System.ComponentModel.ISupportInitialize)(this.Encabezado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -45,9 +48,10 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(9, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(201, 38);
+            this.label1.Size = new System.Drawing.Size(169, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Hotel Otaku";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -60,8 +64,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Encabezado.Image = global::Lab4v2.Properties.Resources.Encabezado;
             this.Encabezado.Location = new System.Drawing.Point(0, -2);
+            this.Encabezado.Margin = new System.Windows.Forms.Padding(2);
             this.Encabezado.Name = "Encabezado";
-            this.Encabezado.Size = new System.Drawing.Size(836, 152);
+            this.Encabezado.Size = new System.Drawing.Size(627, 124);
             this.Encabezado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Encabezado.TabIndex = 1;
             this.Encabezado.TabStop = false;
@@ -74,9 +79,10 @@
             "Individual",
             "Doble",
             "Suite"});
-            this.comboBox1.Location = new System.Drawing.Point(222, 171);
+            this.comboBox1.Location = new System.Drawing.Point(166, 139);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.Size = new System.Drawing.Size(92, 21);
             this.comboBox1.TabIndex = 2;
             // 
             // dataGridView1
@@ -87,23 +93,28 @@
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dataGridView1.Location = new System.Drawing.Point(19, 243);
+            this.dataGridView1.Location = new System.Drawing.Point(80, 198);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(554, 321);
+            this.dataGridView1.Size = new System.Drawing.Size(428, 210);
             this.dataGridView1.TabIndex = 3;
             // 
             // Column1
             // 
-            this.Column1.HeaderText = "Column1";
+            this.Column1.HeaderText = "Nombre";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.Width = 125;
             // 
             // Column2
             // 
-            this.Column2.HeaderText = "Column2";
+            this.Column2.HeaderText = "Habitacion";
+            this.Column2.Items.AddRange(new object[] {
+            "Individual",
+            "Doble ",
+            "Suite"});
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -111,27 +122,49 @@
             // 
             // Column3
             // 
-            this.Column3.HeaderText = "Column3";
+            this.Column3.HeaderText = "Fecha Entrada";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.Width = 125;
             // 
             // Column4
             // 
-            this.Column4.HeaderText = "Column4";
+            this.Column4.HeaderText = "Fecha Salida";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.Width = 125;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Column1";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // calendarColumn1
+            // 
+            this.calendarColumn1.HeaderText = "Column3";
+            this.calendarColumn1.MinimumWidth = 6;
+            this.calendarColumn1.Name = "calendarColumn1";
+            this.calendarColumn1.Width = 125;
+            // 
+            // calendarColumn2
+            // 
+            this.calendarColumn2.HeaderText = "Column4";
+            this.calendarColumn2.MinimumWidth = 6;
+            this.calendarColumn2.Name = "calendarColumn2";
+            this.calendarColumn2.Width = 125;
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(836, 602);
+            this.ClientSize = new System.Drawing.Size(627, 489);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Encabezado);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "lbHotel";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -148,6 +181,9 @@
         private System.Windows.Forms.PictureBox Encabezado;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private CalendarColumn calendarColumn1;
+        private CalendarColumn calendarColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewComboBoxColumn Column2;
         private CalendarColumn Column3;
