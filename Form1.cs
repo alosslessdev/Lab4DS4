@@ -23,12 +23,54 @@ namespace Lab4v2
             // Enlazar el evento click al datagridview
             this.dataGridView1.CellClick += DataGridViewCellClick;
             this.dataGridView1.CellValueChanged += DataGridView1_CellValueChanged;
+            dataGridView1.EditingControlShowing += DataGridView_EditingControlShowing;
+
 
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
                 row.Cells[1].Value = ""; // Poner una opcion en blanco en el combobox por default para la primera fila
             }
 
+        }
+
+        private void DataGridView_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            if (e.Control is TextBox dataGridViewTextBoxColumn1)
+            {
+                dataGridViewTextBoxColumn1.KeyPress -= TextBox_KeyPress; // Remove any existing event handlers.
+                dataGridViewTextBoxColumn1.KeyPress += TextBox_KeyPress; // Add the custom validation.
+            }
+        }
+
+        private void TextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            TextBox dataGridViewTextBoxColumn1 = sender as TextBox;
+
+            // Check if the pressed key is a letter or space.
+            if (char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false; // Allow letters.
+            }
+            else if (e.KeyChar == ' ')
+            {
+                // Disallow spaces at the beginning or multiple spaces between words.
+                if (dataGridViewTextBoxColumn1.SelectionStart == 0 || (dataGridViewTextBoxColumn1.Text.EndsWith(" ") && dataGridViewTextBoxColumn1.SelectionStart == dataGridViewTextBoxColumn1.Text.Length))
+                {
+                    e.Handled = true; // Disallow space.
+                }
+                else
+                {
+                    e.Handled = false; // Allow a single space.
+                }
+            }
+            else if (char.IsControl(e.KeyChar)) // Allow control keys (like Backspace).
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true; // Block any other characters.
+            }
         }
 
         private void DataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
