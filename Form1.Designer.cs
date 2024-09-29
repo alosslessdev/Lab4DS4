@@ -38,7 +38,7 @@ namespace Lab4v2
             this.calendarColumn2 = new Lab4v2.CalendarColumn();
             this.labelEstaticoDias = new System.Windows.Forms.Label();
             this.labelEstaticoPrecio = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelFechaVariable = new System.Windows.Forms.Label();
             this.etiquetaVariablePrecio = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -134,16 +134,16 @@ namespace Lab4v2
             this.labelEstaticoPrecio.TabIndex = 5;
             this.labelEstaticoPrecio.Text = "Precio:";
             // 
-            // label4
+            // labelFechaVariable
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(689, 282);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(23, 25);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "?";
+            this.labelFechaVariable.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.labelFechaVariable.AutoSize = true;
+            this.labelFechaVariable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFechaVariable.Location = new System.Drawing.Point(689, 282);
+            this.labelFechaVariable.Name = "labelFechaVariable";
+            this.labelFechaVariable.Size = new System.Drawing.Size(23, 25);
+            this.labelFechaVariable.TabIndex = 6;
+            this.labelFechaVariable.Text = "?";
             // 
             // etiquetaVariablePrecio
             // 
@@ -196,7 +196,7 @@ namespace Lab4v2
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(836, 602);
             this.Controls.Add(this.etiquetaVariablePrecio);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.labelFechaVariable);
             this.Controls.Add(this.labelEstaticoPrecio);
             this.Controls.Add(this.labelEstaticoDias);
             this.Controls.Add(this.dataGridView1);
@@ -221,7 +221,7 @@ namespace Lab4v2
         private CalendarColumn calendarColumn2;
         private System.Windows.Forms.Label labelEstaticoDias;
         private System.Windows.Forms.Label labelEstaticoPrecio;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelFechaVariable;
         private System.Windows.Forms.Label etiquetaVariablePrecio;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewComboBoxColumn Column2;

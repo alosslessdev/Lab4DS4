@@ -57,7 +57,7 @@ namespace Lab4v2
 
                 DateTime fecha = DateTime.Parse(filaSeleccionada.Cells["Column4"].Value.ToString());
                 TimeSpan fechaResta = fecha.Date - DateTime.Today.Date;
-                label4.Text = fechaResta.ToString("%d");
+                labelFechaVariable.Text = fechaResta.ToString("%d");
 
 
 
@@ -94,7 +94,7 @@ namespace Lab4v2
                 }
 
 
-                etiquetaVariablePrecio.Text = "$" + (precio * Convert.ToInt16(label4.Text));
+                etiquetaVariablePrecio.Text = "$" + (precio * Convert.ToInt16(labelFechaVariable.Text));
 
             }
         }
