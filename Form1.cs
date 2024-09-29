@@ -34,6 +34,17 @@ namespace Lab4v2
 
         private void DataGridViewCellClick(object sender, DataGridViewCellEventArgs e)
         {
+
+            if (dataGridView1.CurrentRow != null)
+            {
+                DataGridViewRow currentRow = dataGridView1.CurrentRow;
+
+                if (currentRow.Cells[1].Value == null)
+                {
+                    currentRow.Cells[1].Value = ""; // Poner una opcion en blanco en el combobox por default para filas nuevas
+                }
+            }
+
             // Asegurar que el usuario haya hecho clic en una celda válida (no en la fila o columna de encabezado)
             if (e.RowIndex >= 0)
             {
@@ -49,17 +60,13 @@ namespace Lab4v2
                 label4.Text = fechaResta.ToString("%d");
 
 
-                if (dataGridView1.CurrentRow != null)
-                {
-                    DataGridViewRow currentRow = dataGridView1.CurrentRow;
-                    currentRow.Cells[1].Value = ""; // Poner una opcion en blanco en el combobox por default para filas nuevas
-                }
+
 
 
                 if (e.ColumnIndex == dataGridView1.Columns["Column2"].Index)
                 {
                     string valorSeleccionado;
-                        if (dataGridView1.Rows[e.RowIndex].Cells["Column2"].Value.ToString() == "")
+                    if (dataGridView1.Rows[e.RowIndex].Cells["Column2"].Value.ToString() == "")
                     {
                         valorSeleccionado = "vacio";
                     }
