@@ -20,10 +20,12 @@ namespace Lab4v2
 
             InitializeComponent();
 
-            // Enlazar el evento click al datagridview
+            // Enlazar las situaciones o eventos del datagridview a este archivo
             this.dataGridView1.CellClick += DataGridViewCellClick;
             this.dataGridView1.CellValueChanged += DataGridView1_CellValueChanged;
             dataGridView1.EditingControlShowing += DataGridView_EditingControlShowing;
+            this.dataGridView1.CellContentClick += DataGridView1_CellContentClick;
+            this.dataGridView1.CellEnter += DataGridView1_CellEnter;
 
 
             foreach (DataGridViewRow row in dataGridView1.Rows)
@@ -32,6 +34,8 @@ namespace Lab4v2
             }
 
         }
+
+
 
         private void DataGridView_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
         {
@@ -73,6 +77,7 @@ namespace Lab4v2
             }
         }
 
+        //diferentes situaciones en el datagridview
         private void DataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             calcular(sender, e);
@@ -84,10 +89,15 @@ namespace Lab4v2
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             calcular(sender, e);
 
+        }
+
+        private void DataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            calcular(sender, e);
         }
 
         private void calcular(object sender, DataGridViewCellEventArgs ev) {
