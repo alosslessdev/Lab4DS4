@@ -66,12 +66,17 @@ namespace Lab4v2
 
 
 
-                DateTime fechaError = DateTime.Parse(exitDateCell.Value.ToString());
+
 
                 if (fechaSalida.Date < fechaEntrada.Date) {
                     exitDateCell.Value = fechaEntrada.Date;
+
+                    DateTime fechaError = DateTime.Parse(exitDateCell.Value.ToString());
+                    string fechaErrorString = fechaError.ToString("M");
+                    string fechaErrorStringSoloAnio = fechaError.ToString("yyyy");
+
                     MessageBox.Show("La fecha de entrada debe ser antes de la fecha de salida. " +
-                        "La fecha de salida se configuro a " + exitDateCell.Value.ToString() + ".", "Fecha de salida antes de fecha de entrada", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        "La fecha de salida se configuro a " + fechaErrorString + " de " + fechaErrorStringSoloAnio + ".", "Fecha de salida antes de fecha de entrada", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
                 labelFechaVariable.Text = fechaResta.ToString("%d");
