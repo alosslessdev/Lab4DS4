@@ -43,8 +43,8 @@ namespace Lab4v2
                 DataGridViewRow selectedRow = dataGridView.Rows[e.RowIndex];
 
                 // Set the labels with the data from the selected row
+                label4.Text = Convert.ToString(DateTime.Parse(selectedRow.Cells["Column4"].Value.ToString()) - DateTime.Today);
                 label5.Text = "Name: " + selectedRow.Cells["Column3"].Value.ToString();
-                label4.Text = "Age: " + selectedRow.Cells["Column4"].Value.ToString();
             }
         }
 
