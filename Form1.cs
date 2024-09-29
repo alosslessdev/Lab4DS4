@@ -17,8 +17,6 @@ namespace Lab4v2
 
         public Form1()
         {
-           
-
 
             InitializeComponent();
 
@@ -29,6 +27,8 @@ namespace Lab4v2
             {
                 row.Cells[1].Value = ""; // Poner una opcion en blanco en el combobox por default para la primera fila
             }
+
+
 
         }
 
@@ -55,8 +55,20 @@ namespace Lab4v2
 
                 // Establecer las etiquetas con los datos de la fila seleccionada
 
-                DateTime fecha = DateTime.Parse(filaSeleccionada.Cells["Column4"].Value.ToString());
-                TimeSpan fechaResta = fecha.Date - DateTime.Today.Date;
+                DateTime fechaEntrada = DateTime.Parse(filaSeleccionada.Cells["Column3"].Value.ToString());
+                DateTime fechaSalida = DateTime.Parse(filaSeleccionada.Cells["Column4"].Value.ToString());
+
+
+                TimeSpan fechaResta = fechaSalida.Date - fechaEntrada.Date;
+
+
+                var exitDateCell = dataGridView.Rows[e.RowIndex].Cells["Column4"];
+                if (fechaSalida.Date < fechaEntrada.Date) {
+                    exitDateCell.Value = fechaEntrada.Date;
+                    MessageBox.Show("La fecha de entrada debe ser antes de la fecha de salida. " +
+                        "La fecha de salida se configuro a " + exitDateCell.Value + ".", "Fecha de salida antes de fecha de entrada", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
                 labelFechaVariable.Text = fechaResta.ToString("%d");
 
 
