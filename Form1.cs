@@ -22,11 +22,7 @@ namespace Lab4v2
             InitializeComponent();
 
             // Enlazar el evento SelectedIndexChanged al ComboBox
-            comboBox1.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
-
            
-
-
         }
 
         private void Form1_Load(object sender, EventArgs e)

@@ -1,10 +1,10 @@
-C:\Users\pancho\Downloads\Laboratorio#4\bin\Debug\Lab4v2.exe.config
-C:\Users\pancho\Downloads\Laboratorio#4\bin\Debug\Lab4v2.exe
-C:\Users\pancho\Downloads\Laboratorio#4\bin\Debug\Lab4v2.pdb
-C:\Users\pancho\Downloads\Laboratorio#4\obj\Debug\Lab4v2.csproj.AssemblyReference.cache
-C:\Users\pancho\Downloads\Laboratorio#4\obj\Debug\Lab4v2.Form1.resources
-C:\Users\pancho\Downloads\Laboratorio#4\obj\Debug\Lab4v2.Properties.Resources.resources
-C:\Users\pancho\Downloads\Laboratorio#4\obj\Debug\Lab4v2.csproj.GenerateResource.cache
-C:\Users\pancho\Downloads\Laboratorio#4\obj\Debug\Lab4v2.csproj.CoreCompileInputs.cache
-C:\Users\pancho\Downloads\Laboratorio#4\obj\Debug\Lab4v2.exe
-C:\Users\pancho\Downloads\Laboratorio#4\obj\Debug\Lab4v2.pdb
+C:\Users\pancho\Desktop\New folder\Lab4DS4\bin\Debug\Lab4v2.exe.config
+C:\Users\pancho\Desktop\New folder\Lab4DS4\bin\Debug\Lab4v2.exe
+C:\Users\pancho\Desktop\New folder\Lab4DS4\bin\Debug\Lab4v2.pdb
+C:\Users\pancho\Desktop\New folder\Lab4DS4\obj\Debug\Lab4v2.csproj.AssemblyReference.cache
+C:\Users\pancho\Desktop\New folder\Lab4DS4\obj\Debug\Lab4v2.Form1.resources
+C:\Users\pancho\Desktop\New folder\Lab4DS4\obj\Debug\Lab4v2.Properties.Resources.resources
+C:\Users\pancho\Desktop\New folder\Lab4DS4\obj\Debug\Lab4v2.csproj.GenerateResource.cache
+C:\Users\pancho\Desktop\New folder\Lab4DS4\obj\Debug\Lab4v2.csproj.CoreCompileInputs.cache
+C:\Users\pancho\Desktop\New folder\Lab4DS4\obj\Debug\Lab4v2.exe
+C:\Users\pancho\Desktop\New folder\Lab4DS4\obj\Debug\Lab4v2.pdb
