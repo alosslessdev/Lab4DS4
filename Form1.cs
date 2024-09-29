@@ -57,16 +57,21 @@ namespace Lab4v2
 
                 DateTime fechaEntrada = DateTime.Parse(filaSeleccionada.Cells["Column3"].Value.ToString());
                 DateTime fechaSalida = DateTime.Parse(filaSeleccionada.Cells["Column4"].Value.ToString());
-
-
                 TimeSpan fechaResta = fechaSalida.Date - fechaEntrada.Date;
 
 
+
+                //validacion de fecha
                 var exitDateCell = dataGridView.Rows[e.RowIndex].Cells["Column4"];
+
+
+
+                DateTime fechaError = DateTime.Parse(exitDateCell.Value.ToString());
+
                 if (fechaSalida.Date < fechaEntrada.Date) {
                     exitDateCell.Value = fechaEntrada.Date;
                     MessageBox.Show("La fecha de entrada debe ser antes de la fecha de salida. " +
-                        "La fecha de salida se configuro a " + exitDateCell.Value + ".", "Fecha de salida antes de fecha de entrada", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        "La fecha de salida se configuro a " + exitDateCell.Value.ToString() + ".", "Fecha de salida antes de fecha de entrada", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
                 labelFechaVariable.Text = fechaResta.ToString("%d");
