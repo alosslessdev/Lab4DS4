@@ -22,13 +22,30 @@ namespace Lab4v2
             InitializeComponent();
 
             // Enlazar el evento SelectedIndexChanged al ComboBox
-           
+            this.dataGridView1.CellClick += DataGridViewCellClick;
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             // Inicializa la selección en "Individual" al cargar el formulario (opcional)
             comboBox1.SelectedIndex = 0;
+        }
+
+        private void DataGridViewCellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Ensure the user clicked a valid cell (not header row or column)
+            if (e.RowIndex >= 0)
+            {
+                DataGridView dataGridView = sender as DataGridView;
+
+                // Get the selected row
+                DataGridViewRow selectedRow = dataGridView.Rows[e.RowIndex];
+
+                // Set the labels with the data from the selected row
+                label5.Text = "Name: " + selectedRow.Cells["Column3"].Value.ToString();
+                label4.Text = "Age: " + selectedRow.Cells["Column4"].Value.ToString();
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -57,6 +74,11 @@ namespace Lab4v2
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
