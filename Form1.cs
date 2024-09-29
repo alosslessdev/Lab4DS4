@@ -27,7 +27,7 @@ namespace Lab4v2
 
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
-                row.Cells[1].Value = ""; // Poner una opcion en blanco en el combobox por default
+                row.Cells[1].Value = ""; // Poner una opcion en blanco en el combobox por default para la primera fila
             }
 
         }
@@ -52,7 +52,7 @@ namespace Lab4v2
                 if (dataGridView1.CurrentRow != null)
                 {
                     DataGridViewRow currentRow = dataGridView1.CurrentRow;
-                    currentRow.Cells[1].Value = ""; // 
+                    currentRow.Cells[1].Value = ""; // Poner una opcion en blanco en el combobox por default para filas nuevas
                 }
 
 
