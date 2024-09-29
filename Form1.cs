@@ -27,7 +27,7 @@ namespace Lab4v2
 
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
-                row.Cells[1].Value = ""; // Set "Option 2" as the default value
+                row.Cells[1].Value = ""; // Poner una opcion en blanco en el combobox por default
             }
 
         }
