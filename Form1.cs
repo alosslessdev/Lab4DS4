@@ -48,6 +48,11 @@ namespace Lab4v2
                 TimeSpan fechaResta = fecha.Date - DateTime.Today.Date;
                 label4.Text = fechaResta.ToString("%d");
 
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    row.Cells[1].Value = ""; // Poner una opcion en blanco en el combobox por default
+                }
+
 
                 if (e.ColumnIndex == dataGridView1.Columns["Column2"].Index)
                 {
