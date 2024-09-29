@@ -34,10 +34,6 @@ namespace Lab4v2
             this.Encabezado = new System.Windows.Forms.PictureBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column3 = new Lab4v2.CalendarColumn();
-            this.Column4 = new Lab4v2.CalendarColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.calendarColumn1 = new Lab4v2.CalendarColumn();
             this.calendarColumn2 = new Lab4v2.CalendarColumn();
@@ -45,6 +41,11 @@ namespace Lab4v2
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Column3 = new Lab4v2.CalendarColumn();
+            this.Column4 = new Lab4v2.CalendarColumn();
             ((System.ComponentModel.ISupportInitialize)(this.Encabezado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -78,6 +79,7 @@ namespace Lab4v2
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Individual",
@@ -106,35 +108,6 @@ namespace Lab4v2
             this.dataGridView1.Size = new System.Drawing.Size(554, 321);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Nombre";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Tipo de cuarto";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Fecha de entrada";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Fecha de salida";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -198,11 +171,60 @@ namespace Lab4v2
             this.label5.TabIndex = 7;
             this.label5.Text = "label5";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(640, 361);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 16);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "label6";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Nombre";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Tipo de cuarto";
+            this.Column2.Items.AddRange(new object[] {
+            "cambiame",
+            "Individual: $50",
+            "Doble: $75",
+            "Suite: $120"});
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = false;
+            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column2.Width = 125;
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                row.Cells[1].Value = "cambiame"; // Set "Option 2" as the default value
+            }
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Fecha de entrada";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Fecha de salida";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 125;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(836, 602);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -227,10 +249,6 @@ namespace Lab4v2
         private System.Windows.Forms.PictureBox Encabezado;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Column2;
-        private CalendarColumn Column3;
-        private CalendarColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private CalendarColumn calendarColumn1;
         private CalendarColumn calendarColumn2;
@@ -238,6 +256,11 @@ namespace Lab4v2
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private Label label6;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewComboBoxColumn Column2;
+        private CalendarColumn Column3;
+        private CalendarColumn Column4;
     }
 }
 

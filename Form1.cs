@@ -12,16 +12,17 @@ namespace Lab4v2
 {
     public partial class Form1 : Form
     {
+
+        private int precio;
+
         public Form1()
         {
-
-            // Create the DataGridView and add a CalendarColumn
            
 
 
             InitializeComponent();
 
-            // Enlazar el evento SelectedIndexChanged al ComboBox
+            // Enlazar el evento click al datagridview
             this.dataGridView1.CellClick += DataGridViewCellClick;
 
         }
@@ -48,7 +49,40 @@ namespace Lab4v2
                 TimeSpan fechaResta = fecha.Date - DateTime.Today.Date;
                 label4.Text = fechaResta.ToString("%d");
 
-                label5.Text = "Name: " + selectedRow.Cells["Column3"].Value.ToString();
+
+                if (e.ColumnIndex == dataGridView1.Columns["Column2"].Index)
+                {
+                    string selectedValue;
+                        if (dataGridView1.Rows[e.RowIndex].Cells["Column2"].Value.ToString() == "cambiame")
+                    {
+                        selectedValue = "vacio";
+                    }
+                    else { 
+                         selectedValue = dataGridView1.Rows[e.RowIndex].Cells["Column2"].Value.ToString();
+                    }
+
+
+                // Do something with the selected value
+                switch (selectedValue)
+                {
+                    case "vacio": // Individual
+                        precio = 0;
+                        break;
+                    case "Individual: $50": // Individual
+                        precio = 50;
+                        break;
+                    case "Doble: $75": // Doble
+                            precio = 76;
+                        break;
+                    case "Suite: $120": // Suite
+                            precio = 120;
+                        break;
+                    }
+                }
+
+
+                label5.Text = "Precio: " + (precio * Convert.ToInt16(label4.Text));
+
             }
         }
 
@@ -65,6 +99,7 @@ namespace Lab4v2
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Cambiar imagen según la selección del ComboBox
+            
         }
 
         private void Cuartos_Click(object sender, EventArgs e)
