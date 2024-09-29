@@ -80,7 +80,7 @@ namespace Lab4v2
                 }
 
 
-                etiquetaVariablePrecio.Text = "" + (precio * Convert.ToInt16(label4.Text));
+                etiquetaVariablePrecio.Text = "$" + (precio * Convert.ToInt16(label4.Text));
 
             }
         }
