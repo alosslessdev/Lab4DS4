@@ -32,43 +32,37 @@ namespace Lab4v2
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            // Inicializa la selección en "Individual" al cargar el formulario (opcional)
-            comboBox1.SelectedIndex = 0;
-        }
-
         private void DataGridViewCellClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Ensure the user clicked a valid cell (not header row or column)
+            // Asegurar que el usuario haya hecho clic en una celda válida (no en la fila o columna de encabezado)
             if (e.RowIndex >= 0)
             {
                 DataGridView dataGridView = sender as DataGridView;
 
-                // Get the selected row
-                DataGridViewRow selectedRow = dataGridView.Rows[e.RowIndex];
+                // Obtener la fila seleccionada
+                DataGridViewRow filaSeleccionada = dataGridView.Rows[e.RowIndex];
 
-                // Set the labels with the data from the selected row
+                // Establecer las etiquetas con los datos de la fila seleccionada
 
-                DateTime fecha = DateTime.Parse(selectedRow.Cells["Column4"].Value.ToString());
+                DateTime fecha = DateTime.Parse(filaSeleccionada.Cells["Column4"].Value.ToString());
                 TimeSpan fechaResta = fecha.Date - DateTime.Today.Date;
                 label4.Text = fechaResta.ToString("%d");
 
 
                 if (e.ColumnIndex == dataGridView1.Columns["Column2"].Index)
                 {
-                    string selectedValue;
+                    string valorSeleccionado;
                         if (dataGridView1.Rows[e.RowIndex].Cells["Column2"].Value.ToString() == "")
                     {
-                        selectedValue = "vacio";
+                        valorSeleccionado = "vacio";
                     }
                     else { 
-                         selectedValue = dataGridView1.Rows[e.RowIndex].Cells["Column2"].Value.ToString();
+                         valorSeleccionado = dataGridView1.Rows[e.RowIndex].Cells["Column2"].Value.ToString();
                     }
 
 
-                // Do something with the selected value
-                switch (selectedValue)
+                // Escoger precio:
+                switch (valorSeleccionado)
                 {
                     case "vacio": // Individual
                         precio = 0;
@@ -86,7 +80,7 @@ namespace Lab4v2
                 }
 
 
-                label5.Text = "Precio: " + (precio * Convert.ToInt16(label4.Text));
+                etiquetaVariablePrecio.Text = "" + (precio * Convert.ToInt16(label4.Text));
 
             }
         }

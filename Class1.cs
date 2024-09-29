@@ -3,19 +3,19 @@ using System.Windows.Forms;
 
 namespace Lab4v2
 {
-    public class CalendarCell : DataGridViewTextBoxCell
+    public class CalendarioDataGridView : DataGridViewTextBoxCell
     {
-        public CalendarCell() : base()
+        public CalendarioDataGridView() : base()
         {
             this.Style.Format = "d"; // Short date format
         }
 
-        public override void InitializeEditingControl(int rowIndex, object initialFormattedValue, DataGridViewCellStyle dataGridViewCellStyle)
+        public override void InitializeEditingControl(int RowIndex, object valorInicialFormateado, DataGridViewCellStyle dataGridViewCellStyle)
         {
-            base.InitializeEditingControl(rowIndex, initialFormattedValue, dataGridViewCellStyle);
+            base.InitializeEditingControl(RowIndex, valorInicialFormateado, dataGridViewCellStyle);
             CalendarEditingControl ctl = DataGridView.EditingControl as CalendarEditingControl;
 
-            // Use the cell value as the current value in the DateTimePicker.
+            // Usar el valor de la celda como el valor actual en DateTimePicker.
             if (this.Value == null)
             {
                 ctl.Value = (DateTime)this.DefaultNewRowValue;
@@ -44,7 +44,7 @@ namespace Lab4v2
 
     public class CalendarColumn : DataGridViewColumn
     {
-        public CalendarColumn() : base(new CalendarCell())
+        public CalendarColumn() : base(new CalendarioDataGridView())
         {
         }
 
@@ -53,9 +53,9 @@ namespace Lab4v2
             get { return base.CellTemplate; }
             set
             {
-                if (value != null && !value.GetType().IsAssignableFrom(typeof(CalendarCell)))
+                if (value != null && !value.GetType().IsAssignableFrom(typeof(CalendarioDataGridView)))
                 {
-                    throw new InvalidCastException("Must be a CalendarCell");
+                    throw new InvalidCastException("Must be a CalendarioDataGridView");
                 }
                 base.CellTemplate = value;
             }
@@ -112,7 +112,7 @@ namespace Lab4v2
             }
         }
 
-        public object GetEditingControlFormattedValue(DataGridViewDataErrorContexts context)
+        public object GetEditingControlFormattedValue(DataGridViewDataErrorContexts contexto)
         {
             return EditingControlFormattedValue;
         }
@@ -149,8 +149,7 @@ namespace Lab4v2
         }
 
         public void PrepareEditingControlForEdit(bool selectAll)
-        {
-            // No preparation needed
+        { 
         }
 
         public bool RepositionEditingControlOnValueChange

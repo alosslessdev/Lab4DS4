@@ -30,16 +30,16 @@ namespace Lab4v2
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.textoEncabezado = new System.Windows.Forms.Label();
             this.Encabezado = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.calendarColumn1 = new Lab4v2.CalendarColumn();
             this.calendarColumn2 = new Lab4v2.CalendarColumn();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelEstaticoDias = new System.Windows.Forms.Label();
+            this.labelEstaticoPrecio = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.etiquetaVariablePrecio = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Column3 = new Lab4v2.CalendarColumn();
@@ -48,17 +48,17 @@ namespace Lab4v2
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // textoEncabezado
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(201, 38);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Hotel Otaku";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.textoEncabezado.AutoSize = true;
+            this.textoEncabezado.BackColor = System.Drawing.Color.Transparent;
+            this.textoEncabezado.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textoEncabezado.Location = new System.Drawing.Point(12, 9);
+            this.textoEncabezado.Name = "textoEncabezado";
+            this.textoEncabezado.Size = new System.Drawing.Size(201, 38);
+            this.textoEncabezado.TabIndex = 0;
+            this.textoEncabezado.Text = "Hotel Otaku";
+            this.textoEncabezado.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // Encabezado
             // 
@@ -112,27 +112,27 @@ namespace Lab4v2
             this.calendarColumn2.Name = "calendarColumn2";
             this.calendarColumn2.Width = 125;
             // 
-            // label2
+            // labelEstaticoDias
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(622, 282);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 25);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Dias:";
+            this.labelEstaticoDias.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.labelEstaticoDias.AutoSize = true;
+            this.labelEstaticoDias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEstaticoDias.Location = new System.Drawing.Point(622, 282);
+            this.labelEstaticoDias.Name = "labelEstaticoDias";
+            this.labelEstaticoDias.Size = new System.Drawing.Size(57, 25);
+            this.labelEstaticoDias.TabIndex = 4;
+            this.labelEstaticoDias.Text = "Dias:";
             // 
-            // label3
+            // labelEstaticoPrecio
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(622, 328);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 25);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Precio:";
+            this.labelEstaticoPrecio.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.labelEstaticoPrecio.AutoSize = true;
+            this.labelEstaticoPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEstaticoPrecio.Location = new System.Drawing.Point(622, 328);
+            this.labelEstaticoPrecio.Name = "labelEstaticoPrecio";
+            this.labelEstaticoPrecio.Size = new System.Drawing.Size(73, 25);
+            this.labelEstaticoPrecio.TabIndex = 5;
+            this.labelEstaticoPrecio.Text = "Precio:";
             // 
             // label4
             // 
@@ -145,16 +145,16 @@ namespace Lab4v2
             this.label4.TabIndex = 6;
             this.label4.Text = "?";
             // 
-            // label5
+            // etiquetaVariablePrecio
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(689, 328);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(23, 25);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "?";
+            this.etiquetaVariablePrecio.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.etiquetaVariablePrecio.AutoSize = true;
+            this.etiquetaVariablePrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.etiquetaVariablePrecio.Location = new System.Drawing.Point(689, 328);
+            this.etiquetaVariablePrecio.Name = "etiquetaVariablePrecio";
+            this.etiquetaVariablePrecio.Size = new System.Drawing.Size(23, 25);
+            this.etiquetaVariablePrecio.TabIndex = 7;
+            this.etiquetaVariablePrecio.Text = "?";
             // 
             // Column1
             // 
@@ -195,16 +195,15 @@ namespace Lab4v2
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(836, 602);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.etiquetaVariablePrecio);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelEstaticoPrecio);
+            this.Controls.Add(this.labelEstaticoDias);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textoEncabezado);
             this.Controls.Add(this.Encabezado);
             this.Name = "Form1";
             this.Text = "lbHotel";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Encabezado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -214,16 +213,16 @@ namespace Lab4v2
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label textoEncabezado;
         private System.Windows.Forms.PictureBox Encabezado;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private CalendarColumn calendarColumn1;
         private CalendarColumn calendarColumn2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelEstaticoDias;
+        private System.Windows.Forms.Label labelEstaticoPrecio;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label etiquetaVariablePrecio;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewComboBoxColumn Column2;
         private CalendarColumn Column3;
