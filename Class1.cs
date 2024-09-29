@@ -53,7 +53,6 @@ namespace Lab4v2
             get { return base.CellTemplate; }
             set
             {
-                // Ensure that the cell used for the template is a CalendarCell.
                 if (value != null && !value.GetType().IsAssignableFrom(typeof(CalendarCell)))
                 {
                     throw new InvalidCastException("Must be a CalendarCell");
@@ -71,17 +70,44 @@ namespace Lab4v2
 
         public CalendarEditingControl()
         {
+            // Set the date range (no earlier than today, no later than 10 years from now)
+            this.MinDate = DateTime.Today;
+            this.MaxDate = DateTime.Today.AddYears(10);
             this.Format = DateTimePickerFormat.Short;
         }
 
         public object EditingControlFormattedValue
         {
-            get { return this.Value.ToShortDateString(); }
+            get
+            {
+                return this.Value.ToShortDateString();
+            }
             set
             {
                 if (value is String)
                 {
-                    this.Value = DateTime.Parse((String)value);
+                    DateTime enteredDate;
+                    if (DateTime.TryParse((String)value, out enteredDate))
+                    {
+                        // Ensure that the entered date is within the allowed range.
+                        if (enteredDate < this.MinDate)
+                        {
+                            this.Value = this.MinDate;
+                        }
+                        else if (enteredDate > this.MaxDate)
+                        {
+                            this.Value = this.MaxDate;
+                        }
+                        else
+                        {
+                            this.Value = enteredDate;
+                        }
+                    }
+                    else
+                    {
+                        // If the entered value is not a valid date, reset to the MinDate.
+                        this.Value = this.MinDate;
+                    }
                 }
             }
         }
@@ -106,7 +132,6 @@ namespace Lab4v2
 
         public bool EditingControlWantsInputKey(Keys keyData, bool dataGridViewWantsInputKey)
         {
-            // Let the DateTimePicker handle the keys.
             switch (keyData & Keys.KeyCode)
             {
                 case Keys.Left:
@@ -157,6 +182,4 @@ namespace Lab4v2
             base.OnValueChanged(eventargs);
         }
     }
-
-   
 }
