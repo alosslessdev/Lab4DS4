@@ -43,7 +43,11 @@ namespace Lab4v2
                 DataGridViewRow selectedRow = dataGridView.Rows[e.RowIndex];
 
                 // Set the labels with the data from the selected row
-                label4.Text = Convert.ToString(DateTime.Parse(selectedRow.Cells["Column4"].Value.ToString()) - DateTime.Today);
+
+                DateTime fecha = DateTime.Parse(selectedRow.Cells["Column4"].Value.ToString());
+                TimeSpan fechaResta = fecha.Date - DateTime.Today.Date;
+                label4.Text = fechaResta.ToString("%d");
+
                 label5.Text = "Name: " + selectedRow.Cells["Column3"].Value.ToString();
             }
         }
