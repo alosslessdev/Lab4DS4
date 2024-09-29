@@ -28,8 +28,6 @@ namespace Lab4v2
                 row.Cells[1].Value = ""; // Poner una opcion en blanco en el combobox por default para la primera fila
             }
 
-
-
         }
 
         private void DataGridViewCellClick(object sender, DataGridViewCellEventArgs e)
@@ -63,11 +61,6 @@ namespace Lab4v2
 
                 //validacion de fecha
                 var exitDateCell = dataGridView.Rows[e.RowIndex].Cells["Column4"];
-
-
-
-
-
                 if (fechaSalida.Date < fechaEntrada.Date) {
                     exitDateCell.Value = fechaEntrada.Date;
 
@@ -81,10 +74,7 @@ namespace Lab4v2
 
                 labelFechaVariable.Text = fechaResta.ToString("%d");
 
-
-
-
-
+                //si el combobox con precios no ha sido tocado
                 if (e.ColumnIndex == dataGridView1.Columns["Column2"].Index)
                 {
                     string valorSeleccionado;
@@ -116,13 +106,15 @@ namespace Lab4v2
                 }
 
 
-                etiquetaVariablePrecio.Text = "$" + (precio * Convert.ToInt16(labelFechaVariable.Text));
+                decimal precioSubTotal = precio * Convert.ToInt16(labelFechaVariable.Text);
+
+                decimal itbms = (precio * (decimal)0.07);
+
+                etiquetaVariablePrecio.Text = "$" + ((precioSubTotal)+(itbms));
 
             }
         }
-
     
     }
-
 
 }
