@@ -7,12 +7,21 @@
       "RelativeMoniker": "D:0:0:{FEE9B678-CBF9-47A2-A5B8-54DDF130428A}|Lab4v2.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{FEE9B678-CBF9-47A2-A5B8-54DDF130428A}|Lab4v2.csproj|C:\\Users\\pancho\\Downloads\\Laboratorio#4\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FEE9B678-CBF9-47A2-A5B8-54DDF130428A}|Lab4v2.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FEE9B678-CBF9-47A2-A5B8-54DDF130428A}|Lab4v2.csproj|C:\\Users\\pancho\\Downloads\\Laboratorio#4\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FEE9B678-CBF9-47A2-A5B8-54DDF130428A}|Lab4v2.csproj|solutionrelative:class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{FEE9B678-CBF9-47A2-A5B8-54DDF130428A}|Lab4v2.csproj|c:\\users\\pancho\\downloads\\laboratorio#4\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FEE9B678-CBF9-47A2-A5B8-54DDF130428A}|Lab4v2.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FEE9B678-CBF9-47A2-A5B8-54DDF130428A}|Lab4v2.csproj|C:\\Users\\pancho\\Downloads\\Laboratorio#4\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FEE9B678-CBF9-47A2-A5B8-54DDF130428A}|Lab4v2.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> master
     }
   ],
   "DocumentGroupContainers": [
@@ -21,11 +30,22 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
+<<<<<<< HEAD
           "DockedWidth": 361,
+=======
+          "DockedWidth": 200,
+>>>>>>> master
           "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
+<<<<<<< HEAD
+=======
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            },
+            {
+              "$type": "Bookmark",
+>>>>>>> master
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
@@ -35,6 +55,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+<<<<<<< HEAD
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\pancho\\Downloads\\Laboratorio#4\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
@@ -43,11 +64,22 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-28T22:52:28.444Z",
+=======
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\pancho\\Downloads\\Laboratorio#4\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\pancho\\Downloads\\Laboratorio#4\\Form1.Designer.cs",
+              "RelativeToolTip": "Form1.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-28T22:36:35.672Z",
+>>>>>>> master
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+<<<<<<< HEAD
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\pancho\\Downloads\\Laboratorio#4\\Class1.cs",
               "RelativeDocumentMoniker": "Class1.cs",
@@ -56,6 +88,16 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-28T23:17:12.481Z",
+=======
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\pancho\\Downloads\\Laboratorio#4\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\pancho\\Downloads\\Laboratorio#4\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAoAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-28T22:31:46.604Z",
+>>>>>>> master
               "EditorCaption": ""
             },
             {
@@ -64,16 +106,27 @@
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\pancho\\Downloads\\Laboratorio#4\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
+<<<<<<< HEAD
               "ToolTip": "C:\\Users\\pancho\\Downloads\\Laboratorio#4\\Form1.cs [Design]*",
               "RelativeToolTip": "Form1.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-28T22:50:41.534Z",
+=======
+              "ToolTip": "C:\\Users\\pancho\\Downloads\\Laboratorio#4\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-28T22:31:20.059Z",
+>>>>>>> master
               "EditorCaption": " [Design]"
             }
           ]
         },
         {
+<<<<<<< HEAD
           "DockedWidth": 261,
+=======
+          "DockedWidth": 422,
+>>>>>>> master
           "SelectedChildIndex": -1,
           "Children": [
             {
