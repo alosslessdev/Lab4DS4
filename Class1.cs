@@ -1,4 +1,5 @@
 ﻿using System;
+<<<<<<< HEAD
 using System.Windows.Forms;
 
 namespace Lab4v2
@@ -159,4 +160,15 @@ namespace Lab4v2
     }
 
    
+=======
+
+public class Class1 : DataGridViewColumn
+{
+	public Class1()
+	{
+	}
+
+
+
+>>>>>>> master
 }

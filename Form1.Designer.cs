@@ -58,7 +58,12 @@
             this.Encabezado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+<<<<<<< HEAD
             this.Encabezado.Image = global::Lab4v2.Properties.Resources.Encabezado;
+=======
+            this.Encabezado.Image = global::Lab4v2.Properties.Resources.Encabezado1;
+            this.Encabezado.InitialImage = ((System.Drawing.Image)(resources.GetObject("Encabezado.InitialImage")));
+>>>>>>> master
             this.Encabezado.Location = new System.Drawing.Point(0, -2);
             this.Encabezado.Name = "Encabezado";
             this.Encabezado.Size = new System.Drawing.Size(836, 152);
@@ -74,11 +79,14 @@
             "Individual",
             "Doble",
             "Suite"});
+<<<<<<< HEAD
             this.comboBox1.Location = new System.Drawing.Point(222, 171);
+=======
+            this.comboBox1.Location = new System.Drawing.Point(12, 175);
+>>>>>>> master
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 2;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // dataGridView1
             // 
