@@ -112,7 +112,7 @@ namespace Lab4v2
             }
         }
 
-        public object GetEditingControlFormattedValue(DataGridViewDataErrorContexts contexto)
+        public object GetEditingControlFormattedValue(DataGridViewDataErrorContexts context)
         {
             return EditingControlFormattedValue;
         }
