@@ -59,7 +59,6 @@ namespace Lab4v2
             this.label1.TabIndex = 0;
             this.label1.Text = "Hotel Otaku";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Encabezado
             // 
@@ -73,7 +72,6 @@ namespace Lab4v2
             this.Encabezado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Encabezado.TabIndex = 1;
             this.Encabezado.TabStop = false;
-            this.Encabezado.Click += new System.EventHandler(this.Encabezado_Click);
             // 
             // dataGridView1
             // 
@@ -92,7 +90,6 @@ namespace Lab4v2
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(554, 380);
             this.dataGridView1.TabIndex = 3;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -125,7 +122,6 @@ namespace Lab4v2
             this.label2.Size = new System.Drawing.Size(57, 25);
             this.label2.TabIndex = 4;
             this.label2.Text = "Dias:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -137,7 +133,6 @@ namespace Lab4v2
             this.label3.Size = new System.Drawing.Size(73, 25);
             this.label3.TabIndex = 5;
             this.label3.Text = "Precio:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 

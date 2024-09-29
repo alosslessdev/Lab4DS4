@@ -91,49 +91,8 @@ namespace Lab4v2
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // Cambiar imagen según la selección del ComboBox
-            
-        }
-
-        private void Cuartos_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Encabezado_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
+    
     }
 
-
-  
 
 }
