@@ -191,19 +191,13 @@ namespace Lab4v2
             // 
             this.Column2.HeaderText = "Tipo de cuarto";
             this.Column2.Items.AddRange(new object[] {
-            "cambiame",
             "Individual: $50",
             "Doble: $75",
             "Suite: $120"});
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = false;
             this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column2.Width = 125;
-            foreach (DataGridViewRow row in dataGridView1.Rows)
-            {
-                row.Cells[1].Value = "cambiame"; // Set "Option 2" as the default value
-            }
             // 
             // Column3
             // 

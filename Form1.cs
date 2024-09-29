@@ -25,6 +25,11 @@ namespace Lab4v2
             // Enlazar el evento click al datagridview
             this.dataGridView1.CellClick += DataGridViewCellClick;
 
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                row.Cells[1].Value = ""; // Set "Option 2" as the default value
+            }
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -53,7 +58,7 @@ namespace Lab4v2
                 if (e.ColumnIndex == dataGridView1.Columns["Column2"].Index)
                 {
                     string selectedValue;
-                        if (dataGridView1.Rows[e.RowIndex].Cells["Column2"].Value.ToString() == "cambiame")
+                        if (dataGridView1.Rows[e.RowIndex].Cells["Column2"].Value.ToString() == "")
                     {
                         selectedValue = "vacio";
                     }
