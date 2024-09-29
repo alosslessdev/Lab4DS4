@@ -33,7 +33,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Column3 = new Lab4v2.CalendarColumn();
             this.Column4 = new Lab4v2.CalendarColumn();
             ((System.ComponentModel.ISupportInitialize)(this.Encabezado)).BeginInit();
@@ -106,6 +106,7 @@
             this.Column2.HeaderText = "Column2";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
+            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column2.Width = 125;
             // 
             // Column3
@@ -148,7 +149,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Column2;
         private CalendarColumn Column3;
         private CalendarColumn Column4;
     }
