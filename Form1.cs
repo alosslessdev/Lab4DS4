@@ -22,6 +22,7 @@ namespace Lab4v2
 
             // Enlazar el evento click al datagridview
             this.dataGridView1.CellClick += DataGridViewCellClick;
+            this.dataGridView1.CellValueChanged += DataGridView1_CellValueChanged;
 
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
@@ -30,8 +31,24 @@ namespace Lab4v2
 
         }
 
-        private void DataGridViewCellClick(object sender, DataGridViewCellEventArgs e)
+        private void DataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
+            calcular(sender, e);
+        }
+
+        private void DataGridViewCellClick(object sender, DataGridViewCellEventArgs ev)
+        {
+            calcular(sender, ev);
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            calcular(sender, e);
+
+        }
+
+        private void calcular(object sender, DataGridViewCellEventArgs ev) {
 
             if (dataGridView1.CurrentRow != null)
             {
@@ -43,85 +60,86 @@ namespace Lab4v2
                 }
             }
 
-            dataGridView1.CellValueChanged += (s, ev) =>
+
+
+            // Asegurar que el usuario haya hecho clic en una celda válida (no en la fila o columna de encabezado)
+            if (ev.RowIndex >= 0)
             {
+                DataGridView dataGridView = sender as DataGridView;
 
-                // Asegurar que el usuario haya hecho clic en una celda válida (no en la fila o columna de encabezado)
-                if (ev.RowIndex >= 0)
+                // Obtener la fila seleccionada
+                DataGridViewRow filaSeleccionada = dataGridView.Rows[ev.RowIndex];
+
+                // Establecer las etiquetas con los datos de la fila seleccionada
+
+                DateTime fechaEntrada = DateTime.Parse(filaSeleccionada.Cells["Column3"].Value.ToString());
+                DateTime fechaSalida = DateTime.Parse(filaSeleccionada.Cells["Column4"].Value.ToString());
+                TimeSpan fechaResta = fechaSalida.Date - fechaEntrada.Date;
+
+
+
+                //validacion de fecha
+                var exitDateCell = dataGridView.Rows[ev.RowIndex].Cells["Column4"];
+                if (fechaSalida.Date < fechaEntrada.Date)
                 {
-                    DataGridView dataGridView = sender as DataGridView;
+                    exitDateCell.Value = fechaEntrada.Date;
 
-                    // Obtener la fila seleccionada
-                    DataGridViewRow filaSeleccionada = dataGridView.Rows[ev.RowIndex];
+                    DateTime fechaError = DateTime.Parse(exitDateCell.Value.ToString());
+                    string fechaErrorString = fechaError.ToString("M");
+                    string fechaErrorStringSoloAnio = fechaError.ToString("yyyy");
 
-                    // Establecer las etiquetas con los datos de la fila seleccionada
+                    MessageBox.Show("La fecha de entrada debe ser antes de la fecha de salida. " +
+                        "La fecha de salida se configuro a " + fechaErrorString + " de " + fechaErrorStringSoloAnio + ".", "Fecha de salida antes de fecha de entrada", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
 
-                    DateTime fechaEntrada = DateTime.Parse(filaSeleccionada.Cells["Column3"].Value.ToString());
-                    DateTime fechaSalida = DateTime.Parse(filaSeleccionada.Cells["Column4"].Value.ToString());
-                    TimeSpan fechaResta = fechaSalida.Date - fechaEntrada.Date;
+                labelFechaVariable.Text = fechaResta.ToString("%d");
 
-
-
-                    //validacion de fecha
-                    var exitDateCell = dataGridView.Rows[ev.RowIndex].Cells["Column4"];
-                    if (fechaSalida.Date < fechaEntrada.Date) {
-                        exitDateCell.Value = fechaEntrada.Date;
-
-                        DateTime fechaError = DateTime.Parse(exitDateCell.Value.ToString());
-                        string fechaErrorString = fechaError.ToString("M");
-                        string fechaErrorStringSoloAnio = fechaError.ToString("yyyy");
-
-                        MessageBox.Show("La fecha de entrada debe ser antes de la fecha de salida. " +
-                            "La fecha de salida se configuro a " + fechaErrorString + " de " + fechaErrorStringSoloAnio + ".", "Fecha de salida antes de fecha de entrada", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-
-                    labelFechaVariable.Text = fechaResta.ToString("%d");
-
-                    //si el combobox con precios no ha sido tocado
-                    if (ev.ColumnIndex == dataGridView1.Columns["Column2"].Index)
+                //si el combobox con precios no ha sido tocado
+                if (ev.ColumnIndex == dataGridView1.Columns["Column2"].Index)
+                {
+                    string valorSeleccionado;
+                    if (dataGridView1.Rows[ev.RowIndex].Cells["Column2"].Value.ToString() == "")
                     {
-                        string valorSeleccionado;
-                        if (dataGridView1.Rows[ev.RowIndex].Cells["Column2"].Value.ToString() == "")
-                        {
-                            valorSeleccionado = "vacio";
-                        }
-                        else {
-                            valorSeleccionado = dataGridView1.Rows[e.RowIndex].Cells["Column2"].Value.ToString();
-                        }
-
-
-                        // Escoger precio:
-                        switch (valorSeleccionado)
-                        {
-                            case "vacio": // Individual
-                                precio = 0;
-                                break;
-                            case "Individual: $50": // Individual
-                                precio = 50;
-                                break;
-                            case "Doble: $75": // Doble
-                                precio = 76;
-                                break;
-                            case "Suite: $120": // Suite
-                                precio = 120;
-                                break;
-                        }
-                    }
-
-                    if (Convert.ToInt16(labelFechaVariable.Text) != 0)
-                    {
-                        decimal precioSubTotal = precio * Convert.ToInt16(labelFechaVariable.Text);
-                        decimal itbms = (precio * (decimal)0.07);
-                        etiquetaVariablePrecio.Text = "$" + ((precioSubTotal) + (itbms));
+                        valorSeleccionado = "vacio";
                     }
                     else
                     {
-                        etiquetaVariablePrecio.Text = "$ 0" ;
+                        valorSeleccionado = dataGridView1.Rows[ev.RowIndex].Cells["Column2"].Value.ToString();
+                    }
+
+
+                    // Escoger precio:
+                    switch (valorSeleccionado)
+                    {
+                        case "vacio": // Individual
+                            precio = 0;
+                            break;
+                        case "Individual: $50": // Individual
+                            precio = 50;
+                            break;
+                        case "Doble: $75": // Doble
+                            precio = 76;
+                            break;
+                        case "Suite: $120": // Suite
+                            precio = 120;
+                            break;
                     }
                 }
-            };
+
+                if (Convert.ToInt16(labelFechaVariable.Text) != 0)
+                {
+                    decimal precioSubTotal = precio * Convert.ToInt16(labelFechaVariable.Text);
+                    decimal itbms = (precio * (decimal)0.07);
+                    etiquetaVariablePrecio.Text = "$" + ((precioSubTotal) + (itbms));
+                }
+                else
+                {
+                    etiquetaVariablePrecio.Text = "$ 0";
+                }
+            }
+
         }
-    
+
     }
 
 }
