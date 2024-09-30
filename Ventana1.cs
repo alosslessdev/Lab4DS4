@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace Lab4v2
 {
-    public partial class Form1 : Form
+    public partial class Ventana1 : Form
     {
 
         private int precio = 0;
 
-        public Form1()
+        public Ventana1()
         {
 
             InitializeComponent();

@@ -2,7 +2,7 @@
 
 namespace Lab4v2
 {
-    partial class Form1
+    partial class Ventana1
     {
         /// <summary>
         /// Required designer variable.
@@ -202,7 +202,7 @@ namespace Lab4v2
             this.labelInfoEstatico.Text = "En fila actual:";
             this.labelInfoEstatico.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // Form1
+            // Ventana1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -216,7 +216,7 @@ namespace Lab4v2
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textoEncabezado);
             this.Controls.Add(this.Encabezado);
-            this.Name = "Form1";
+            this.Name = "Ventana1";
             this.Text = "lbHotel";
             ((System.ComponentModel.ISupportInitialize)(this.Encabezado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
