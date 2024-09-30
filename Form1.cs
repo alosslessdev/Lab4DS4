@@ -20,6 +20,9 @@ namespace Lab4v2
 
             InitializeComponent();
 
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
+
+
             // Enlazar las situaciones o eventos del datagridview a este archivo
             this.dataGridView1.CellClick += DataGridViewCellClick;
             this.dataGridView1.CellValueChanged += DataGridView1_CellValueChanged;
