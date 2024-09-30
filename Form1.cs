@@ -20,7 +20,6 @@ namespace Lab4v2
 
             InitializeComponent();
 
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
 
 
             // Enlazar las situaciones o eventos del datagridview a este archivo
@@ -86,9 +85,9 @@ namespace Lab4v2
             calcular(sender, e);
         }
 
-        private void DataGridViewCellClick(object sender, DataGridViewCellEventArgs ev)
+        private void DataGridViewCellClick(object sender, DataGridViewCellEventArgs e)
         {
-            calcular(sender, ev);
+            calcular(sender, e);
 
         }
 
@@ -173,7 +172,7 @@ namespace Lab4v2
                             precio = 50;
                             break;
                         case "Doble: $75": // Doble
-                            precio = 76;
+                            precio = 75;
                             break;
                         case "Suite: $120": // Suite
                             precio = 120;
