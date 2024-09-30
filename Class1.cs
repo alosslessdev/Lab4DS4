@@ -3,19 +3,19 @@ using System.Windows.Forms;
 
 namespace Lab4v2
 {
-    public class CalendarCell : DataGridViewTextBoxCell
+    public class CalendarioDataGridView : DataGridViewTextBoxCell
     {
-        public CalendarCell() : base()
+        public CalendarioDataGridView() : base()
         {
             this.Style.Format = "d"; // Short date format
         }
 
-        public override void InitializeEditingControl(int rowIndex, object initialFormattedValue, DataGridViewCellStyle dataGridViewCellStyle)
+        public override void InitializeEditingControl(int RowIndex, object valorInicialFormateado, DataGridViewCellStyle dataGridViewCellStyle)
         {
-            base.InitializeEditingControl(rowIndex, initialFormattedValue, dataGridViewCellStyle);
+            base.InitializeEditingControl(RowIndex, valorInicialFormateado, dataGridViewCellStyle);
             CalendarEditingControl ctl = DataGridView.EditingControl as CalendarEditingControl;
 
-            // Use the cell value as the current value in the DateTimePicker.
+            // Usar el valor de la celda como el valor actual en DateTimePicker.
             if (this.Value == null)
             {
                 ctl.Value = (DateTime)this.DefaultNewRowValue;
@@ -44,7 +44,7 @@ namespace Lab4v2
 
     public class CalendarColumn : DataGridViewColumn
     {
-        public CalendarColumn() : base(new CalendarCell())
+        public CalendarColumn() : base(new CalendarioDataGridView())
         {
         }
 
@@ -53,10 +53,9 @@ namespace Lab4v2
             get { return base.CellTemplate; }
             set
             {
-                // Ensure that the cell used for the template is a CalendarCell.
-                if (value != null && !value.GetType().IsAssignableFrom(typeof(CalendarCell)))
+                if (value != null && !value.GetType().IsAssignableFrom(typeof(CalendarioDataGridView)))
                 {
-                    throw new InvalidCastException("Must be a CalendarCell");
+                    throw new InvalidCastException("Must be a CalendarioDataGridView");
                 }
                 base.CellTemplate = value;
             }
@@ -71,17 +70,44 @@ namespace Lab4v2
 
         public CalendarEditingControl()
         {
+            // Set the date range (no earlier than today, no later than 10 years from now)
+            this.MinDate = DateTime.Today;
+            this.MaxDate = DateTime.Today.AddYears(10);
             this.Format = DateTimePickerFormat.Short;
         }
 
         public object EditingControlFormattedValue
         {
-            get { return this.Value.ToShortDateString(); }
+            get
+            {
+                return this.Value.ToShortDateString();
+            }
             set
             {
                 if (value is String)
                 {
-                    this.Value = DateTime.Parse((String)value);
+                    DateTime enteredDate;
+                    if (DateTime.TryParse((String)value, out enteredDate))
+                    {
+                        // Ensure that the entered date is within the allowed range.
+                        if (enteredDate < this.MinDate)
+                        {
+                            this.Value = this.MinDate;
+                        }
+                        else if (enteredDate > this.MaxDate)
+                        {
+                            this.Value = this.MaxDate;
+                        }
+                        else
+                        {
+                            this.Value = enteredDate;
+                        }
+                    }
+                    else
+                    {
+                        // If the entered value is not a valid date, reset to the MinDate.
+                        this.Value = this.MinDate;
+                    }
                 }
             }
         }
@@ -106,7 +132,6 @@ namespace Lab4v2
 
         public bool EditingControlWantsInputKey(Keys keyData, bool dataGridViewWantsInputKey)
         {
-            // Let the DateTimePicker handle the keys.
             switch (keyData & Keys.KeyCode)
             {
                 case Keys.Left:
@@ -124,8 +149,7 @@ namespace Lab4v2
         }
 
         public void PrepareEditingControlForEdit(bool selectAll)
-        {
-            // No preparation needed
+        { 
         }
 
         public bool RepositionEditingControlOnValueChange
@@ -157,6 +181,4 @@ namespace Lab4v2
             base.OnValueChanged(eventargs);
         }
     }
-
-   
 }

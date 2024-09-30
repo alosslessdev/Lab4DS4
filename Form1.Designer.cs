@@ -1,4 +1,6 @@
-﻿namespace Lab4v2
+﻿using System.Windows.Forms;
+
+namespace Lab4v2
 {
     partial class Form1
     {
@@ -28,9 +30,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.textoEncabezado = new System.Windows.Forms.Label();
             this.Encabezado = new System.Windows.Forms.PictureBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -39,23 +40,25 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.calendarColumn1 = new Lab4v2.CalendarColumn();
             this.calendarColumn2 = new Lab4v2.CalendarColumn();
+            this.labelEstaticoDias = new System.Windows.Forms.Label();
+            this.labelEstaticoPrecio = new System.Windows.Forms.Label();
+            this.labelFechaVariable = new System.Windows.Forms.Label();
+            this.etiquetaVariablePrecio = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Encabezado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // textoEncabezado
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 7);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 31);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Hotel Otaku";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.textoEncabezado.AutoSize = true;
+            this.textoEncabezado.BackColor = System.Drawing.Color.Transparent;
+            this.textoEncabezado.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textoEncabezado.Location = new System.Drawing.Point(12, 9);
+            this.textoEncabezado.Name = "textoEncabezado";
+            this.textoEncabezado.Size = new System.Drawing.Size(201, 38);
+            this.textoEncabezado.TabIndex = 0;
+            this.textoEncabezado.Text = "Hotel Otaku";
+            this.textoEncabezado.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // Encabezado
             // 
@@ -64,42 +67,30 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Encabezado.Image = global::Lab4v2.Properties.Resources.Encabezado;
             this.Encabezado.Location = new System.Drawing.Point(0, -2);
-            this.Encabezado.Margin = new System.Windows.Forms.Padding(2);
             this.Encabezado.Name = "Encabezado";
-            this.Encabezado.Size = new System.Drawing.Size(627, 124);
+            this.Encabezado.Size = new System.Drawing.Size(836, 152);
             this.Encabezado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Encabezado.TabIndex = 1;
             this.Encabezado.TabStop = false;
-            this.Encabezado.Click += new System.EventHandler(this.Encabezado_Click);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Individual",
-            "Doble",
-            "Suite"});
-            this.comboBox1.Location = new System.Drawing.Point(166, 139);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(92, 21);
-            this.comboBox1.TabIndex = 2;
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dataGridView1.Location = new System.Drawing.Point(80, 198);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Location = new System.Drawing.Point(19, 184);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(428, 210);
+            this.dataGridView1.Size = new System.Drawing.Size(554, 380);
             this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
             // Column1
             // 
@@ -110,11 +101,11 @@
             // 
             // Column2
             // 
-            this.Column2.HeaderText = "Habitacion";
+            this.Column2.HeaderText = "Tipo de cuarto";
             this.Column2.Items.AddRange(new object[] {
-            "Individual",
-            "Doble ",
-            "Suite"});
+            "Individual: $50",
+            "Doble: $75",
+            "Suite: $120"});
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -122,72 +113,121 @@
             // 
             // Column3
             // 
-            this.Column3.HeaderText = "Fecha Entrada";
+            this.Column3.HeaderText = "Fecha de entrada";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.Width = 125;
             // 
             // Column4
             // 
-            this.Column4.HeaderText = "Fecha Salida";
+            this.Column4.HeaderText = "Fecha de salida";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.Width = 125;
             // 
             // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Column1";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Nombre";
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.Width = 125;
             // 
             // calendarColumn1
             // 
-            this.calendarColumn1.HeaderText = "Column3";
+            this.calendarColumn1.HeaderText = "Fecha de entrada";
             this.calendarColumn1.MinimumWidth = 6;
             this.calendarColumn1.Name = "calendarColumn1";
             this.calendarColumn1.Width = 125;
             // 
             // calendarColumn2
             // 
-            this.calendarColumn2.HeaderText = "Column4";
+            this.calendarColumn2.HeaderText = "Fecha de salida";
             this.calendarColumn2.MinimumWidth = 6;
             this.calendarColumn2.Name = "calendarColumn2";
             this.calendarColumn2.Width = 125;
             // 
+            // labelEstaticoDias
+            // 
+            this.labelEstaticoDias.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.labelEstaticoDias.AutoSize = true;
+            this.labelEstaticoDias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEstaticoDias.Location = new System.Drawing.Point(622, 282);
+            this.labelEstaticoDias.Name = "labelEstaticoDias";
+            this.labelEstaticoDias.Size = new System.Drawing.Size(57, 25);
+            this.labelEstaticoDias.TabIndex = 4;
+            this.labelEstaticoDias.Text = "Dias:";
+            // 
+            // labelEstaticoPrecio
+            // 
+            this.labelEstaticoPrecio.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.labelEstaticoPrecio.AutoSize = true;
+            this.labelEstaticoPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEstaticoPrecio.Location = new System.Drawing.Point(622, 328);
+            this.labelEstaticoPrecio.Name = "labelEstaticoPrecio";
+            this.labelEstaticoPrecio.Size = new System.Drawing.Size(73, 25);
+            this.labelEstaticoPrecio.TabIndex = 5;
+            this.labelEstaticoPrecio.Text = "Precio:";
+            // 
+            // labelFechaVariable
+            // 
+            this.labelFechaVariable.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.labelFechaVariable.AutoSize = true;
+            this.labelFechaVariable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFechaVariable.Location = new System.Drawing.Point(689, 282);
+            this.labelFechaVariable.Name = "labelFechaVariable";
+            this.labelFechaVariable.Size = new System.Drawing.Size(23, 25);
+            this.labelFechaVariable.TabIndex = 6;
+            this.labelFechaVariable.Text = "?";
+            // 
+            // etiquetaVariablePrecio
+            // 
+            this.etiquetaVariablePrecio.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.etiquetaVariablePrecio.AutoSize = true;
+            this.etiquetaVariablePrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.etiquetaVariablePrecio.Location = new System.Drawing.Point(689, 328);
+            this.etiquetaVariablePrecio.Name = "etiquetaVariablePrecio";
+            this.etiquetaVariablePrecio.Size = new System.Drawing.Size(23, 25);
+            this.etiquetaVariablePrecio.TabIndex = 7;
+            this.etiquetaVariablePrecio.Text = "?";
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(627, 489);
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.ClientSize = new System.Drawing.Size(836, 602);
+            this.Controls.Add(this.etiquetaVariablePrecio);
+            this.Controls.Add(this.labelFechaVariable);
+            this.Controls.Add(this.labelEstaticoPrecio);
+            this.Controls.Add(this.labelEstaticoDias);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textoEncabezado);
             this.Controls.Add(this.Encabezado);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "lbHotel";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Encabezado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label textoEncabezado;
         private System.Windows.Forms.PictureBox Encabezado;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private CalendarColumn calendarColumn1;
         private CalendarColumn calendarColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Column2;
+        private System.Windows.Forms.Label labelEstaticoDias;
+        private System.Windows.Forms.Label labelEstaticoPrecio;
+        private System.Windows.Forms.Label labelFechaVariable;
+        private System.Windows.Forms.Label etiquetaVariablePrecio;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewComboBoxColumn Column2;
         private CalendarColumn Column3;
         private CalendarColumn Column4;
+
     }
 }
 
