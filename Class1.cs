@@ -72,7 +72,7 @@ namespace Lab4v2
         {
             // Set the date range (no earlier than today, no later than 10 years from now)
             this.MinDate = DateTime.Today;
-            this.MaxDate = DateTime.Today.AddYears(10);
+            this.MaxDate = DateTime.Today.AddYears(1);
             this.Format = DateTimePickerFormat.Short;
         }
 
