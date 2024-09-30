@@ -44,6 +44,7 @@ namespace Lab4v2
             this.labelEstaticoPrecio = new System.Windows.Forms.Label();
             this.labelFechaVariable = new System.Windows.Forms.Label();
             this.etiquetaVariablePrecio = new System.Windows.Forms.Label();
+            this.labelInfoEstatico = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Encabezado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -190,12 +191,24 @@ namespace Lab4v2
             this.etiquetaVariablePrecio.TabIndex = 7;
             this.etiquetaVariablePrecio.Text = "?";
             // 
+            // labelInfoEstatico
+            // 
+            this.labelInfoEstatico.AutoSize = true;
+            this.labelInfoEstatico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelInfoEstatico.Location = new System.Drawing.Point(622, 239);
+            this.labelInfoEstatico.Name = "labelInfoEstatico";
+            this.labelInfoEstatico.Size = new System.Drawing.Size(128, 25);
+            this.labelInfoEstatico.TabIndex = 8;
+            this.labelInfoEstatico.Text = "En fila actual:";
+            this.labelInfoEstatico.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(836, 602);
+            this.Controls.Add(this.labelInfoEstatico);
             this.Controls.Add(this.etiquetaVariablePrecio);
             this.Controls.Add(this.labelFechaVariable);
             this.Controls.Add(this.labelEstaticoPrecio);
@@ -209,6 +222,7 @@ namespace Lab4v2
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion
@@ -227,6 +241,7 @@ namespace Lab4v2
         private DataGridViewComboBoxColumn Column2;
         private columnaCalendario Column3;
         private columnaCalendario Column4;
+        private Label labelInfoEstatico;
     }
 }
 
