@@ -13,7 +13,7 @@ namespace Lab4v2
     public partial class Form1 : Form
     {
 
-        private int precio;
+        private int precio = 0;
 
         public Form1()
         {
@@ -161,12 +161,10 @@ namespace Lab4v2
                         valorSeleccionado = dataGridView1.Rows[ev.RowIndex].Cells["Column2"].Value.ToString();
                     }
 
-
                     // Escoger precio:
                     switch (valorSeleccionado)
                     {
-                        case "vacio": // Individual
-                            precio = 0;
+                        case "vacio": // Si esta vacio no cambiar el valor de precio el cual debe ser 0.
                             break;
                         case "Individual: $50": // Individual
                             precio = 50;
