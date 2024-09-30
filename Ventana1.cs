@@ -1,4 +1,8 @@
-﻿using System;
+/*Carrasco, Nathan
+Herrera, Francisco
+Wu, Ivan*/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,12 +14,12 @@ using System.Windows.Forms;
 
 namespace Lab4v2
 {
-    public partial class Form1 : Form
+    public partial class Ventana1 : Form
     {
 
         private int precio = 0;
 
-        public Form1()
+        public Ventana1()
         {
 
             InitializeComponent();
@@ -43,8 +47,8 @@ namespace Lab4v2
         {
             if (e.Control is TextBox dataGridViewTextBoxColumn1)
             {
-                dataGridViewTextBoxColumn1.KeyPress -= TextBox_KeyPress; // Remove any existing event handlers.
-                dataGridViewTextBoxColumn1.KeyPress += TextBox_KeyPress; // Add the custom validation.
+                dataGridViewTextBoxColumn1.KeyPress -= TextBox_KeyPress; // Quitar manejadores de eventos.
+                dataGridViewTextBoxColumn1.KeyPress += TextBox_KeyPress; // Aniadir nuestra validacion.
             }
         }
 
@@ -52,34 +56,34 @@ namespace Lab4v2
         {
             TextBox dataGridViewTextBoxColumn1 = sender as TextBox;
 
-            // Check if the pressed key is a letter or space.
+            // Revisar si la tecla es una letra o un espacio.
             if (char.IsLetter(e.KeyChar))
             {
-                e.Handled = false; // Allow letters.
+                e.Handled = false; // Permitir espacios.
             }
             else if (e.KeyChar == ' ')
             {
-                // Disallow spaces at the beginning or multiple spaces between words.
+                // No permitir espacios al inicio o varios espacios entre palabras.
                 if (dataGridViewTextBoxColumn1.SelectionStart == 0 || (dataGridViewTextBoxColumn1.Text.EndsWith(" ") && dataGridViewTextBoxColumn1.SelectionStart == dataGridViewTextBoxColumn1.Text.Length))
                 {
-                    e.Handled = true; // Disallow space.
+                    e.Handled = true; // No permitir espacios.
                 }
                 else
                 {
-                    e.Handled = false; // Allow a single space.
+                    e.Handled = false; // Permitir un solo espacio.
                 }
             }
-            else if (char.IsControl(e.KeyChar)) // Allow control keys (like Backspace).
+            else if (char.IsControl(e.KeyChar)) // Permitir borrar.
             {
                 e.Handled = false;
             }
             else
             {
-                e.Handled = true; // Block any other characters.
+                e.Handled = true; // No permitir otros caracteres.
             }
         }
 
-        //diferentes situaciones en el datagridview
+        //diferentes situaciones en el datagridview que llevan a calculos
         private void DataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             calcular(sender, e);

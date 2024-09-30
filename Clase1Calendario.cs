@@ -1,4 +1,8 @@
-﻿using System;
+/*Carrasco, Nathan
+Herrera, Francisco
+Wu, Ivan*/
+
+using System;
 using System.Windows.Forms;
 
 namespace Lab4v2
@@ -42,9 +46,9 @@ namespace Lab4v2
         }
     }
 
-    public class CalendarColumn : DataGridViewColumn
+    public class columnaCalendario : DataGridViewColumn
     {
-        public CalendarColumn() : base(new CalendarioDataGridView())
+        public columnaCalendario() : base(new CalendarioDataGridView())
         {
         }
 
@@ -72,7 +76,7 @@ namespace Lab4v2
         {
             // Set the date range (no earlier than today, no later than 10 years from now)
             this.MinDate = DateTime.Today;
-            this.MaxDate = DateTime.Today.AddYears(10);
+            this.MaxDate = DateTime.Today.AddYears(1);
             this.Format = DateTimePickerFormat.Short;
         }
 

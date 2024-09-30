@@ -2,7 +2,7 @@
 
 namespace Lab4v2
 {
-    partial class Form1
+    partial class Ventana1
     {
         /// <summary>
         /// Required designer variable.
@@ -35,15 +35,16 @@ namespace Lab4v2
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column3 = new Lab4v2.CalendarColumn();
-            this.Column4 = new Lab4v2.CalendarColumn();
+            this.Column3 = new Lab4v2.columnaCalendario();
+            this.Column4 = new Lab4v2.columnaCalendario();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.calendarColumn1 = new Lab4v2.CalendarColumn();
-            this.calendarColumn2 = new Lab4v2.CalendarColumn();
+            this.columna1Calendario = new Lab4v2.columnaCalendario();
+            this.columna2Calendario = new Lab4v2.columnaCalendario();
             this.labelEstaticoDias = new System.Windows.Forms.Label();
             this.labelEstaticoPrecio = new System.Windows.Forms.Label();
             this.labelFechaVariable = new System.Windows.Forms.Label();
             this.etiquetaVariablePrecio = new System.Windows.Forms.Label();
+            this.labelInfoEstatico = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Encabezado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -132,19 +133,19 @@ namespace Lab4v2
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.Width = 125;
             // 
-            // calendarColumn1
+            // columna1Calendario
             // 
-            this.calendarColumn1.HeaderText = "Fecha de entrada";
-            this.calendarColumn1.MinimumWidth = 6;
-            this.calendarColumn1.Name = "calendarColumn1";
-            this.calendarColumn1.Width = 125;
+            this.columna1Calendario.HeaderText = "Fecha de entrada";
+            this.columna1Calendario.MinimumWidth = 6;
+            this.columna1Calendario.Name = "columna1Calendario";
+            this.columna1Calendario.Width = 125;
             // 
-            // calendarColumn2
+            // columna2Calendario
             // 
-            this.calendarColumn2.HeaderText = "Fecha de salida";
-            this.calendarColumn2.MinimumWidth = 6;
-            this.calendarColumn2.Name = "calendarColumn2";
-            this.calendarColumn2.Width = 125;
+            this.columna2Calendario.HeaderText = "Fecha de salida";
+            this.columna2Calendario.MinimumWidth = 6;
+            this.columna2Calendario.Name = "columna2Calendario";
+            this.columna2Calendario.Width = 125;
             // 
             // labelEstaticoDias
             // 
@@ -190,12 +191,24 @@ namespace Lab4v2
             this.etiquetaVariablePrecio.TabIndex = 7;
             this.etiquetaVariablePrecio.Text = "?";
             // 
-            // Form1
+            // labelInfoEstatico
+            // 
+            this.labelInfoEstatico.AutoSize = true;
+            this.labelInfoEstatico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelInfoEstatico.Location = new System.Drawing.Point(622, 239);
+            this.labelInfoEstatico.Name = "labelInfoEstatico";
+            this.labelInfoEstatico.Size = new System.Drawing.Size(128, 25);
+            this.labelInfoEstatico.TabIndex = 8;
+            this.labelInfoEstatico.Text = "En fila actual:";
+            this.labelInfoEstatico.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // Ventana1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(836, 602);
+            this.Controls.Add(this.labelInfoEstatico);
             this.Controls.Add(this.etiquetaVariablePrecio);
             this.Controls.Add(this.labelFechaVariable);
             this.Controls.Add(this.labelEstaticoPrecio);
@@ -203,12 +216,13 @@ namespace Lab4v2
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textoEncabezado);
             this.Controls.Add(this.Encabezado);
-            this.Name = "Form1";
+            this.Name = "Ventana1";
             this.Text = "lbHotel";
             ((System.ComponentModel.ISupportInitialize)(this.Encabezado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion
@@ -217,17 +231,17 @@ namespace Lab4v2
         private System.Windows.Forms.PictureBox Encabezado;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private CalendarColumn calendarColumn1;
-        private CalendarColumn calendarColumn2;
+        private columnaCalendario columna1Calendario;
+        private columnaCalendario columna2Calendario;
         private System.Windows.Forms.Label labelEstaticoDias;
         private System.Windows.Forms.Label labelEstaticoPrecio;
         private System.Windows.Forms.Label labelFechaVariable;
         private System.Windows.Forms.Label etiquetaVariablePrecio;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewComboBoxColumn Column2;
-        private CalendarColumn Column3;
-        private CalendarColumn Column4;
-
+        private columnaCalendario Column3;
+        private columnaCalendario Column4;
+        private Label labelInfoEstatico;
     }
 }
 
