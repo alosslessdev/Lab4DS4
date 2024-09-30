@@ -33,18 +33,20 @@ namespace Lab4v2
             this.textoEncabezado = new System.Windows.Forms.Label();
             this.Encabezado = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column3 = new Lab4v2.columnaCalendario();
-            this.Column4 = new Lab4v2.columnaCalendario();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columna1Calendario = new Lab4v2.columnaCalendario();
-            this.columna2Calendario = new Lab4v2.columnaCalendario();
             this.labelEstaticoDias = new System.Windows.Forms.Label();
             this.labelEstaticoPrecio = new System.Windows.Forms.Label();
             this.labelFechaVariable = new System.Windows.Forms.Label();
             this.etiquetaVariablePrecio = new System.Windows.Forms.Label();
             this.labelInfoEstatico = new System.Windows.Forms.Label();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnaCalendario1 = new Lab4v2.columnaCalendario();
+            this.columnaCalendario2 = new Lab4v2.columnaCalendario();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new Lab4v2.columnaCalendario();
+            this.Column4 = new Lab4v2.columnaCalendario();
+            this.columna1Calendario = new Lab4v2.columnaCalendario();
+            this.columna2Calendario = new Lab4v2.columnaCalendario();
             ((System.ComponentModel.ISupportInitialize)(this.Encabezado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -93,13 +95,6 @@ namespace Lab4v2
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Nombre";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
-            // 
             // Column2
             // 
             this.Column2.HeaderText = "Tipo de cuarto";
@@ -111,41 +106,6 @@ namespace Lab4v2
             this.Column2.Name = "Column2";
             this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Fecha de entrada";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Fecha de salida";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // columna1Calendario
-            // 
-            this.columna1Calendario.HeaderText = "Fecha de entrada";
-            this.columna1Calendario.MinimumWidth = 6;
-            this.columna1Calendario.Name = "columna1Calendario";
-            this.columna1Calendario.Width = 125;
-            // 
-            // columna2Calendario
-            // 
-            this.columna2Calendario.HeaderText = "Fecha de salida";
-            this.columna2Calendario.MinimumWidth = 6;
-            this.columna2Calendario.Name = "columna2Calendario";
-            this.columna2Calendario.Width = 125;
             // 
             // labelEstaticoDias
             // 
@@ -193,6 +153,7 @@ namespace Lab4v2
             // 
             // labelInfoEstatico
             // 
+            this.labelInfoEstatico.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelInfoEstatico.AutoSize = true;
             this.labelInfoEstatico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelInfoEstatico.Location = new System.Drawing.Point(622, 239);
@@ -201,6 +162,62 @@ namespace Lab4v2
             this.labelInfoEstatico.TabIndex = 8;
             this.labelInfoEstatico.Text = "En fila actual:";
             this.labelInfoEstatico.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // columnaCalendario1
+            // 
+            this.columnaCalendario1.HeaderText = "Fecha de entrada";
+            this.columnaCalendario1.MinimumWidth = 6;
+            this.columnaCalendario1.Name = "columnaCalendario1";
+            this.columnaCalendario1.Width = 125;
+            // 
+            // columnaCalendario2
+            // 
+            this.columnaCalendario2.HeaderText = "Fecha de salida";
+            this.columnaCalendario2.MinimumWidth = 6;
+            this.columnaCalendario2.Name = "columnaCalendario2";
+            this.columnaCalendario2.Width = 125;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Nombre";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Fecha de entrada";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Fecha de salida";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 125;
+            // 
+            // columna1Calendario
+            // 
+            this.columna1Calendario.HeaderText = "Fecha de entrada";
+            this.columna1Calendario.MinimumWidth = 6;
+            this.columna1Calendario.Name = "columna1Calendario";
+            this.columna1Calendario.Width = 125;
+            // 
+            // columna2Calendario
+            // 
+            this.columna2Calendario.HeaderText = "Fecha de salida";
+            this.columna2Calendario.MinimumWidth = 6;
+            this.columna2Calendario.Name = "columna2Calendario";
+            this.columna2Calendario.Width = 125;
             // 
             // Ventana1
             // 
@@ -242,6 +259,8 @@ namespace Lab4v2
         private columnaCalendario Column3;
         private columnaCalendario Column4;
         private Label labelInfoEstatico;
+        private columnaCalendario columnaCalendario1;
+        private columnaCalendario columnaCalendario2;
     }
 }
 
