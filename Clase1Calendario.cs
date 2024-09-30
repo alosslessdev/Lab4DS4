@@ -1,4 +1,8 @@
-﻿using System;
+/*Carrasco, Nathan
+Herrera, Francisco
+Wu, Ivan*/
+
+using System;
 using System.Windows.Forms;
 
 namespace Lab4v2
