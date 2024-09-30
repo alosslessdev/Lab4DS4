@@ -35,11 +35,11 @@ namespace Lab4v2
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column3 = new Lab4v2.CalendarColumn();
-            this.Column4 = new Lab4v2.CalendarColumn();
+            this.Column3 = new Lab4v2.columnaCalendario();
+            this.Column4 = new Lab4v2.columnaCalendario();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.calendarColumn1 = new Lab4v2.CalendarColumn();
-            this.calendarColumn2 = new Lab4v2.CalendarColumn();
+            this.columna1Calendario = new Lab4v2.columnaCalendario();
+            this.columna2Calendario = new Lab4v2.columnaCalendario();
             this.labelEstaticoDias = new System.Windows.Forms.Label();
             this.labelEstaticoPrecio = new System.Windows.Forms.Label();
             this.labelFechaVariable = new System.Windows.Forms.Label();
@@ -132,19 +132,19 @@ namespace Lab4v2
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.Width = 125;
             // 
-            // calendarColumn1
+            // columna1Calendario
             // 
-            this.calendarColumn1.HeaderText = "Fecha de entrada";
-            this.calendarColumn1.MinimumWidth = 6;
-            this.calendarColumn1.Name = "calendarColumn1";
-            this.calendarColumn1.Width = 125;
+            this.columna1Calendario.HeaderText = "Fecha de entrada";
+            this.columna1Calendario.MinimumWidth = 6;
+            this.columna1Calendario.Name = "columna1Calendario";
+            this.columna1Calendario.Width = 125;
             // 
-            // calendarColumn2
+            // columna2Calendario
             // 
-            this.calendarColumn2.HeaderText = "Fecha de salida";
-            this.calendarColumn2.MinimumWidth = 6;
-            this.calendarColumn2.Name = "calendarColumn2";
-            this.calendarColumn2.Width = 125;
+            this.columna2Calendario.HeaderText = "Fecha de salida";
+            this.columna2Calendario.MinimumWidth = 6;
+            this.columna2Calendario.Name = "columna2Calendario";
+            this.columna2Calendario.Width = 125;
             // 
             // labelEstaticoDias
             // 
@@ -218,16 +218,16 @@ namespace Lab4v2
         private System.Windows.Forms.PictureBox Encabezado;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private CalendarColumn calendarColumn1;
-        private CalendarColumn calendarColumn2;
+        private columnaCalendario columna1Calendario;
+        private columnaCalendario columna2Calendario;
         private System.Windows.Forms.Label labelEstaticoDias;
         private System.Windows.Forms.Label labelEstaticoPrecio;
         private System.Windows.Forms.Label labelFechaVariable;
         private System.Windows.Forms.Label etiquetaVariablePrecio;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewComboBoxColumn Column2;
-        private CalendarColumn Column3;
-        private CalendarColumn Column4;
+        private columnaCalendario Column3;
+        private columnaCalendario Column4;
     }
 }
 

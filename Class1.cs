@@ -42,9 +42,9 @@ namespace Lab4v2
         }
     }
 
-    public class CalendarColumn : DataGridViewColumn
+    public class columnaCalendario : DataGridViewColumn
     {
-        public CalendarColumn() : base(new CalendarioDataGridView())
+        public columnaCalendario() : base(new CalendarioDataGridView())
         {
         }
 
