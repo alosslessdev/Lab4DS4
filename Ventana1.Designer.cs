@@ -31,9 +31,11 @@ namespace Lab4v2
         private void InitializeComponent()
         {
             this.textoEncabezado = new System.Windows.Forms.Label();
-            this.Encabezado = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Column3 = new Lab4v2.columnaCalendario();
+            this.Column4 = new Lab4v2.columnaCalendario();
             this.labelEstaticoDias = new System.Windows.Forms.Label();
             this.labelEstaticoPrecio = new System.Windows.Forms.Label();
             this.labelFechaVariable = new System.Windows.Forms.Label();
@@ -42,13 +44,12 @@ namespace Lab4v2
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnaCalendario1 = new Lab4v2.columnaCalendario();
             this.columnaCalendario2 = new Lab4v2.columnaCalendario();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new Lab4v2.columnaCalendario();
-            this.Column4 = new Lab4v2.columnaCalendario();
             this.columna1Calendario = new Lab4v2.columnaCalendario();
             this.columna2Calendario = new Lab4v2.columnaCalendario();
-            ((System.ComponentModel.ISupportInitialize)(this.Encabezado)).BeginInit();
+            this.Encabezado = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Encabezado)).BeginInit();
             this.SuspendLayout();
             // 
             // textoEncabezado
@@ -62,19 +63,6 @@ namespace Lab4v2
             this.textoEncabezado.TabIndex = 0;
             this.textoEncabezado.Text = "Hotel Otaku";
             this.textoEncabezado.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // Encabezado
-            // 
-            this.Encabezado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Encabezado.Image = global::Lab4v2.Properties.Resources.Encabezado;
-            this.Encabezado.Location = new System.Drawing.Point(0, -2);
-            this.Encabezado.Name = "Encabezado";
-            this.Encabezado.Size = new System.Drawing.Size(836, 152);
-            this.Encabezado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Encabezado.TabIndex = 1;
-            this.Encabezado.TabStop = false;
             // 
             // dataGridView1
             // 
@@ -95,6 +83,13 @@ namespace Lab4v2
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Nombre";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
+            // 
             // Column2
             // 
             this.Column2.HeaderText = "Tipo de cuarto";
@@ -106,6 +101,20 @@ namespace Lab4v2
             this.Column2.Name = "Column2";
             this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column2.Width = 125;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Fecha de entrada";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Fecha de salida";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 125;
             // 
             // labelEstaticoDias
             // 
@@ -184,27 +193,6 @@ namespace Lab4v2
             this.columnaCalendario2.Name = "columnaCalendario2";
             this.columnaCalendario2.Width = 125;
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Nombre";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Fecha de entrada";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Fecha de salida";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
-            // 
             // columna1Calendario
             // 
             this.columna1Calendario.HeaderText = "Fecha de entrada";
@@ -219,12 +207,36 @@ namespace Lab4v2
             this.columna2Calendario.Name = "columna2Calendario";
             this.columna2Calendario.Width = 125;
             // 
+            // Encabezado
+            // 
+            this.Encabezado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Encabezado.Image = global::Lab4v2.Properties.Resources.Encabezado;
+            this.Encabezado.Location = new System.Drawing.Point(0, -2);
+            this.Encabezado.Name = "Encabezado";
+            this.Encabezado.Size = new System.Drawing.Size(836, 152);
+            this.Encabezado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Encabezado.TabIndex = 1;
+            this.Encabezado.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(627, 377);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(123, 36);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Ventana1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(836, 602);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.labelInfoEstatico);
             this.Controls.Add(this.etiquetaVariablePrecio);
             this.Controls.Add(this.labelFechaVariable);
@@ -235,8 +247,8 @@ namespace Lab4v2
             this.Controls.Add(this.Encabezado);
             this.Name = "Ventana1";
             this.Text = "lbHotel";
-            ((System.ComponentModel.ISupportInitialize)(this.Encabezado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Encabezado)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,6 +273,7 @@ namespace Lab4v2
         private Label labelInfoEstatico;
         private columnaCalendario columnaCalendario1;
         private columnaCalendario columnaCalendario2;
+        private Button button1;
     }
 }
 
