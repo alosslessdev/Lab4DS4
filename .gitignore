@@ -1,1 +1,6 @@
-/.vs
+**/.vs
+**/obj
+*.exe
+*.pdb
+*.zip
+/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
