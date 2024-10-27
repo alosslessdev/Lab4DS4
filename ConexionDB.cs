@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 /*
  * Carrasco, Nathan
@@ -38,11 +39,13 @@ namespace Lab4v2
                     // Abrir la conexión y ejecutar el procedimiento almacenado
                     connection.Open();
                     command.ExecuteNonQuery();
+                    MessageBox.Show("Reserva insertada con exito para: " + nombre);
+
                 }
             }
             catch (Exception ex)
             {
-                throw new Exception("Error al insertar la reserva: " + ex.Message);
+                MessageBox.Show("Error al insertar la reserva: " + ex.Message);
             }
         }
 

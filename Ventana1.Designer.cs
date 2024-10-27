@@ -94,9 +94,9 @@ namespace Lab4v2
             // 
             this.Column2.HeaderText = "Tipo de cuarto";
             this.Column2.Items.AddRange(new object[] {
-            "Individual: $50",
-            "Doble: $75",
-            "Suite: $120"});
+            "Individual",
+            "Doble",
+            "Suite"});
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
