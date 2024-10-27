@@ -166,33 +166,10 @@ namespace Lab4v2
                         valorSeleccionado = dataGridView1.Rows[ev.RowIndex].Cells["Column2"].Value.ToString();
                     }
 
-                    // Escoger precio:
-                    switch (valorSeleccionado)
-                    {
-                        case "vacio": // Si esta vacio no cambiar el valor de precio el cual debe ser 0.
-                            break;
-                        case "Individual: $50": // Individual
-                            precio = 50;
-                            break;
-                        case "Doble: $75": // Doble
-                            precio = 75;
-                            break;
-                        case "Suite: $120": // Suite
-                            precio = 120;
-                            break;
-                    }
+                  
                 }
 
-                if (Convert.ToInt16(labelFechaVariable.Text) != 0)
-                {
-                    decimal precioSubTotal = precio * Convert.ToInt16(labelFechaVariable.Text);
-                    decimal itbms = (precio * (decimal)0.07);
-                    etiquetaVariablePrecio.Text = "$" + ((precioSubTotal) + (itbms));
-                }
-                else
-                {
-                    etiquetaVariablePrecio.Text = "$ 0";
-                }
+               
             }
 
         }
