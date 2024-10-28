@@ -22,10 +22,6 @@ namespace Lab4v2
             this.Hide();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -42,10 +38,7 @@ namespace Lab4v2
             labelVariableMonto.Text = Convert.ToString(montoTotal);
         }
 
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
     }
     
 }
