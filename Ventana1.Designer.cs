@@ -81,7 +81,6 @@ namespace Lab4v2
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(757, 380);
             this.dataGridView1.TabIndex = 3;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
             // Column1
             // 
@@ -248,6 +247,7 @@ namespace Lab4v2
             this.Controls.Add(this.Encabezado);
             this.Name = "Ventana1";
             this.Text = "lbHotel";
+            this.Load += new System.EventHandler(this.Ventana1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Encabezado)).EndInit();
             this.ResumeLayout(false);

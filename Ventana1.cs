@@ -28,11 +28,8 @@ namespace Lab4v2
 
 
             // Enlazar las situaciones o eventos del datagridview a este archivo
-            this.dataGridView1.CellClick += DataGridViewCellClick;
             this.dataGridView1.CellValueChanged += DataGridView1_CellValueChanged;
             dataGridView1.EditingControlShowing += DataGridView_EditingControlShowing;
-            this.dataGridView1.CellContentClick += DataGridView1_CellContentClick;
-            this.dataGridView1.CellEnter += DataGridView1_CellEnter;
 
 
             foreach (DataGridViewRow row in dataGridView1.Rows)
@@ -90,22 +87,7 @@ namespace Lab4v2
             calcular(sender, e);
         }
 
-        private void DataGridViewCellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            calcular(sender, e);
 
-        }
-
-        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            calcular(sender, e);
-
-        }
-
-        private void DataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
-        {
-            calcular(sender, e);
-        }
 
         private void calcular(object sender, DataGridViewCellEventArgs ev) {
 
@@ -202,6 +184,11 @@ namespace Lab4v2
         {
             Reportes reportes = new Reportes();
             reportes.Show();
+        }
+
+        private void Ventana1_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show("Para guardar la reserva, presione enter despues de rellenar todos los datos del huesped.");
         }
     }
 

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 /*
  * Carrasco, Nathan
@@ -17,14 +18,14 @@ namespace Lab4v2
 {
     internal class ConexionDB
     {
-        private string connectionString = "Data Source=localhost;Initial Catalog=Hotel_otaku;Integrated Security=True";
+        private string detallesConexion = "Data Source=localhost;Initial Catalog=Hotel_otaku;Integrated Security=True";
 
         // Método para crear una nueva reserva
         public void CrearReserva(string nombre, string tipoHabitacion, DateTime fechaEntrada, DateTime fechaSalida)
         {
             try
             {
-                using (SqlConnection connection = new SqlConnection(connectionString))
+                using (SqlConnection connection = new SqlConnection(detallesConexion))
                 {
                     SqlCommand command = new SqlCommand("CrearReserva", connection);
                     command.CommandType = CommandType.StoredProcedure;
@@ -50,35 +51,51 @@ namespace Lab4v2
         }
 
         // Método para obtener todas las reservas existentes
-        public DataTable VerReservasExistentes()
+        internal DataSet ObtenerDatos(int tipo)
         {
-            DataTable reservasTable = new DataTable();
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            DataSet datos = new DataSet();
+            try
             {
-                using (SqlCommand command = new SqlCommand("VerReservasExistentes", connection))
+                using (SqlConnection conexion = new SqlConnection(detallesConexion))
                 {
-                    command.CommandType = CommandType.StoredProcedure;
-
-                    try
+                    switch (tipo)
                     {
-                        // Abrir la conexión
-                        connection.Open();
 
-                        // Ejecutar el procedimiento y llenar el DataTable
-                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
-                        {
-                            adapter.Fill(reservasTable);
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        throw new Exception("Error al obtener las reservas: " + ex.Message);
+                        case 0:
+                            string query = "SELECT id_reserva, nombre, habitacion, fecha_entrada, fecha_salida," +
+                                " monto_total FROM [Hotel_otaku].[dbo].[Reservas]";
+                            SqlDataAdapter adaptador = new SqlDataAdapter(query, conexion);
+                            adaptador.Fill(datos, "Reservas");
+                            break;
+                        case 1:
+                             query = "SELECT id_reserva, nombre, habitacion, fecha_entrada, fecha_salida," +
+                               " monto_total FROM [Hotel_otaku].[dbo].[Reservas] WHERE Habitacion = 'Suite'";
+                             adaptador = new SqlDataAdapter(query, conexion);
+                            adaptador.Fill(datos, "Reservas");
+                            break;
+                        case 2:
+                             query = "SELECT id_reserva, nombre, habitacion, fecha_entrada, fecha_salida," +
+                               " monto_total FROM [Hotel_otaku].[dbo].[Reservas] WHERE Habitacion = 'Doble'";
+                             adaptador = new SqlDataAdapter(query, conexion);
+                            adaptador.Fill(datos, "Reservas");
+                            break;
+                        case 3:
+                             query = "SELECT id_reserva, nombre, habitacion, fecha_entrada, fecha_salida," +
+                               " monto_total FROM [Hotel_otaku].[dbo].[Reservas] WHERE Habitacion = 'Individual'";
+                             adaptador = new SqlDataAdapter(query, conexion);
+                            adaptador.Fill(datos, "Reservas");
+                            break;
+                        default:
+                            break;
+
                     }
                 }
             }
-
-            return reservasTable;
+            catch (SqlException ex)
+            {
+                throw new Exception("Error al obtener libros: " + ex.Message);
+            }
+            return datos;
         }
     }
 }
