@@ -37,9 +37,7 @@ namespace Lab4v2
             this.Column3 = new Lab4v2.columnaCalendario();
             this.Column4 = new Lab4v2.columnaCalendario();
             this.labelEstaticoDias = new System.Windows.Forms.Label();
-            this.labelEstaticoPrecio = new System.Windows.Forms.Label();
             this.labelFechaVariable = new System.Windows.Forms.Label();
-            this.etiquetaVariablePrecio = new System.Windows.Forms.Label();
             this.labelInfoEstatico = new System.Windows.Forms.Label();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnaCalendario1 = new Lab4v2.columnaCalendario();
@@ -47,7 +45,7 @@ namespace Lab4v2
             this.columna1Calendario = new Lab4v2.columnaCalendario();
             this.columna2Calendario = new Lab4v2.columnaCalendario();
             this.Encabezado = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnReportes = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Encabezado)).BeginInit();
             this.SuspendLayout();
@@ -79,9 +77,8 @@ namespace Lab4v2
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(554, 380);
+            this.dataGridView1.Size = new System.Drawing.Size(757, 380);
             this.dataGridView1.TabIndex = 3;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
             // Column1
             // 
@@ -94,9 +91,9 @@ namespace Lab4v2
             // 
             this.Column2.HeaderText = "Tipo de cuarto";
             this.Column2.Items.AddRange(new object[] {
-            "Individual: $50",
-            "Doble: $75",
-            "Suite: $120"});
+            "Individual",
+            "Doble",
+            "Suite"});
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -121,51 +118,29 @@ namespace Lab4v2
             this.labelEstaticoDias.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelEstaticoDias.AutoSize = true;
             this.labelEstaticoDias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEstaticoDias.Location = new System.Drawing.Point(622, 282);
+            this.labelEstaticoDias.Location = new System.Drawing.Point(825, 282);
             this.labelEstaticoDias.Name = "labelEstaticoDias";
             this.labelEstaticoDias.Size = new System.Drawing.Size(57, 25);
             this.labelEstaticoDias.TabIndex = 4;
             this.labelEstaticoDias.Text = "Dias:";
-            // 
-            // labelEstaticoPrecio
-            // 
-            this.labelEstaticoPrecio.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.labelEstaticoPrecio.AutoSize = true;
-            this.labelEstaticoPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEstaticoPrecio.Location = new System.Drawing.Point(622, 328);
-            this.labelEstaticoPrecio.Name = "labelEstaticoPrecio";
-            this.labelEstaticoPrecio.Size = new System.Drawing.Size(73, 25);
-            this.labelEstaticoPrecio.TabIndex = 5;
-            this.labelEstaticoPrecio.Text = "Precio:";
             // 
             // labelFechaVariable
             // 
             this.labelFechaVariable.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelFechaVariable.AutoSize = true;
             this.labelFechaVariable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFechaVariable.Location = new System.Drawing.Point(689, 282);
+            this.labelFechaVariable.Location = new System.Drawing.Point(892, 282);
             this.labelFechaVariable.Name = "labelFechaVariable";
             this.labelFechaVariable.Size = new System.Drawing.Size(23, 25);
             this.labelFechaVariable.TabIndex = 6;
             this.labelFechaVariable.Text = "?";
-            // 
-            // etiquetaVariablePrecio
-            // 
-            this.etiquetaVariablePrecio.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.etiquetaVariablePrecio.AutoSize = true;
-            this.etiquetaVariablePrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.etiquetaVariablePrecio.Location = new System.Drawing.Point(689, 328);
-            this.etiquetaVariablePrecio.Name = "etiquetaVariablePrecio";
-            this.etiquetaVariablePrecio.Size = new System.Drawing.Size(23, 25);
-            this.etiquetaVariablePrecio.TabIndex = 7;
-            this.etiquetaVariablePrecio.Text = "?";
             // 
             // labelInfoEstatico
             // 
             this.labelInfoEstatico.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelInfoEstatico.AutoSize = true;
             this.labelInfoEstatico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInfoEstatico.Location = new System.Drawing.Point(622, 239);
+            this.labelInfoEstatico.Location = new System.Drawing.Point(825, 239);
             this.labelInfoEstatico.Name = "labelInfoEstatico";
             this.labelInfoEstatico.Size = new System.Drawing.Size(128, 25);
             this.labelInfoEstatico.TabIndex = 8;
@@ -215,38 +190,38 @@ namespace Lab4v2
             this.Encabezado.Image = global::Lab4v2.Properties.Resources.Encabezado;
             this.Encabezado.Location = new System.Drawing.Point(0, -2);
             this.Encabezado.Name = "Encabezado";
-            this.Encabezado.Size = new System.Drawing.Size(836, 152);
+            this.Encabezado.Size = new System.Drawing.Size(1039, 152);
             this.Encabezado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Encabezado.TabIndex = 1;
             this.Encabezado.TabStop = false;
             // 
-            // button1
+            // btnReportes
             // 
-            this.button1.Location = new System.Drawing.Point(627, 377);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 36);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Reportes";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnReportes.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnReportes.Location = new System.Drawing.Point(830, 338);
+            this.btnReportes.Name = "btnReportes";
+            this.btnReportes.Size = new System.Drawing.Size(123, 36);
+            this.btnReportes.TabIndex = 9;
+            this.btnReportes.Text = "Reportes";
+            this.btnReportes.UseVisualStyleBackColor = true;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // Ventana1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(836, 602);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1039, 602);
+            this.Controls.Add(this.btnReportes);
             this.Controls.Add(this.labelInfoEstatico);
-            this.Controls.Add(this.etiquetaVariablePrecio);
             this.Controls.Add(this.labelFechaVariable);
-            this.Controls.Add(this.labelEstaticoPrecio);
             this.Controls.Add(this.labelEstaticoDias);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textoEncabezado);
             this.Controls.Add(this.Encabezado);
             this.Name = "Ventana1";
             this.Text = "lbHotel";
+            this.Load += new System.EventHandler(this.Ventana1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Encabezado)).EndInit();
             this.ResumeLayout(false);
@@ -263,9 +238,7 @@ namespace Lab4v2
         private columnaCalendario columna1Calendario;
         private columnaCalendario columna2Calendario;
         private System.Windows.Forms.Label labelEstaticoDias;
-        private System.Windows.Forms.Label labelEstaticoPrecio;
         private System.Windows.Forms.Label labelFechaVariable;
-        private System.Windows.Forms.Label etiquetaVariablePrecio;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewComboBoxColumn Column2;
         private columnaCalendario Column3;
@@ -273,7 +246,7 @@ namespace Lab4v2
         private Label labelInfoEstatico;
         private columnaCalendario columnaCalendario1;
         private columnaCalendario columnaCalendario2;
-        private Button button1;
+        private Button btnReportes;
     }
 }
 
