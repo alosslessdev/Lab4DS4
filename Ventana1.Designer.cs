@@ -37,9 +37,7 @@ namespace Lab4v2
             this.Column3 = new Lab4v2.columnaCalendario();
             this.Column4 = new Lab4v2.columnaCalendario();
             this.labelEstaticoDias = new System.Windows.Forms.Label();
-            this.labelEstaticoPrecio = new System.Windows.Forms.Label();
             this.labelFechaVariable = new System.Windows.Forms.Label();
-            this.etiquetaVariablePrecio = new System.Windows.Forms.Label();
             this.labelInfoEstatico = new System.Windows.Forms.Label();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnaCalendario1 = new Lab4v2.columnaCalendario();
@@ -47,7 +45,7 @@ namespace Lab4v2
             this.columna1Calendario = new Lab4v2.columnaCalendario();
             this.columna2Calendario = new Lab4v2.columnaCalendario();
             this.Encabezado = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnReportes = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Encabezado)).BeginInit();
             this.SuspendLayout();
@@ -126,17 +124,6 @@ namespace Lab4v2
             this.labelEstaticoDias.TabIndex = 4;
             this.labelEstaticoDias.Text = "Dias:";
             // 
-            // labelEstaticoPrecio
-            // 
-            this.labelEstaticoPrecio.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.labelEstaticoPrecio.AutoSize = true;
-            this.labelEstaticoPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEstaticoPrecio.Location = new System.Drawing.Point(825, 328);
-            this.labelEstaticoPrecio.Name = "labelEstaticoPrecio";
-            this.labelEstaticoPrecio.Size = new System.Drawing.Size(73, 25);
-            this.labelEstaticoPrecio.TabIndex = 5;
-            this.labelEstaticoPrecio.Text = "Precio:";
-            // 
             // labelFechaVariable
             // 
             this.labelFechaVariable.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -147,17 +134,6 @@ namespace Lab4v2
             this.labelFechaVariable.Size = new System.Drawing.Size(23, 25);
             this.labelFechaVariable.TabIndex = 6;
             this.labelFechaVariable.Text = "?";
-            // 
-            // etiquetaVariablePrecio
-            // 
-            this.etiquetaVariablePrecio.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.etiquetaVariablePrecio.AutoSize = true;
-            this.etiquetaVariablePrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.etiquetaVariablePrecio.Location = new System.Drawing.Point(892, 328);
-            this.etiquetaVariablePrecio.Name = "etiquetaVariablePrecio";
-            this.etiquetaVariablePrecio.Size = new System.Drawing.Size(23, 25);
-            this.etiquetaVariablePrecio.TabIndex = 7;
-            this.etiquetaVariablePrecio.Text = "?";
             // 
             // labelInfoEstatico
             // 
@@ -219,16 +195,16 @@ namespace Lab4v2
             this.Encabezado.TabIndex = 1;
             this.Encabezado.TabStop = false;
             // 
-            // button1
+            // btnReportes
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button1.Location = new System.Drawing.Point(830, 377);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 36);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Reportes";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnReportes.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnReportes.Location = new System.Drawing.Point(830, 338);
+            this.btnReportes.Name = "btnReportes";
+            this.btnReportes.Size = new System.Drawing.Size(123, 36);
+            this.btnReportes.TabIndex = 9;
+            this.btnReportes.Text = "Reportes";
+            this.btnReportes.UseVisualStyleBackColor = true;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // Ventana1
             // 
@@ -236,11 +212,9 @@ namespace Lab4v2
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1039, 602);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnReportes);
             this.Controls.Add(this.labelInfoEstatico);
-            this.Controls.Add(this.etiquetaVariablePrecio);
             this.Controls.Add(this.labelFechaVariable);
-            this.Controls.Add(this.labelEstaticoPrecio);
             this.Controls.Add(this.labelEstaticoDias);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textoEncabezado);
@@ -264,9 +238,7 @@ namespace Lab4v2
         private columnaCalendario columna1Calendario;
         private columnaCalendario columna2Calendario;
         private System.Windows.Forms.Label labelEstaticoDias;
-        private System.Windows.Forms.Label labelEstaticoPrecio;
         private System.Windows.Forms.Label labelFechaVariable;
-        private System.Windows.Forms.Label etiquetaVariablePrecio;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewComboBoxColumn Column2;
         private columnaCalendario Column3;
@@ -274,7 +246,7 @@ namespace Lab4v2
         private Label labelInfoEstatico;
         private columnaCalendario columnaCalendario1;
         private columnaCalendario columnaCalendario2;
-        private Button button1;
+        private Button btnReportes;
     }
 }
 

@@ -30,7 +30,7 @@
         {
             this.textoEncabezado = new System.Windows.Forms.Label();
             this.Encabezado = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnReservas = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.labelEstaticoTipoHabitacion = new System.Windows.Forms.Label();
@@ -70,16 +70,16 @@
             this.Encabezado.TabIndex = 10;
             this.Encabezado.TabStop = false;
             // 
-            // button1
+            // btnReservas
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button1.Location = new System.Drawing.Point(1006, 164);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 37);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Reservas";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnReservas.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnReservas.Location = new System.Drawing.Point(1006, 164);
+            this.btnReservas.Name = "btnReservas";
+            this.btnReservas.Size = new System.Drawing.Size(149, 37);
+            this.btnReservas.TabIndex = 17;
+            this.btnReservas.Text = "Reservas";
+            this.btnReservas.UseVisualStyleBackColor = true;
+            this.btnReservas.Click += new System.EventHandler(this.button1_Click);
             // 
             // comboBox1
             // 
@@ -191,7 +191,7 @@
             this.Controls.Add(this.labelEstaticoTipoHabitacion);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnReservas);
             this.Controls.Add(this.textoEncabezado);
             this.Controls.Add(this.Encabezado);
             this.Name = "Reportes";
@@ -211,7 +211,7 @@
         private System.Windows.Forms.Label textoEncabezado;
         private columnaCalendario columna2Calendario;
         private System.Windows.Forms.PictureBox Encabezado;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnReservas;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label labelEstaticoTipoHabitacion;
